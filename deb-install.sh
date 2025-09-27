@@ -32,7 +32,7 @@ function terabox {
 	sudo apt-get install /tmp/terabox.deb
 }
 
-# invoke update function given as command argument 1
-apps=$(grep '^function .* {' $0 | awk '{print $2}')
+# invoke update function: either arg 1 or interactive fzf
+apps=$(cat $0 | grep '^function .* {' | awk '{print $2}')
 selected=$([ -n "$1" ] && echo "$1" || (echo "$apps" | fzf))
 $selected
