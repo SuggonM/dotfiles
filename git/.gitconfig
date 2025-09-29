@@ -1,0 +1,16 @@
+[user]
+	email = maharjansagun99@gmail.com
+	name = Suggon
+[init]
+	defaultBranch = main
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[safe]
+	directory = /mnt/c/*
+
+# for easier auth, always use SSH url when cloning and adding origin
+[url "git@github.com:"]
+	insteadOf = https://github.com/
