@@ -1,0 +1,48 @@
+# config for ble.sh (bash extension with nice features)
+# https://github.com/akinomyoga/ble.sh
+
+function vim-load-hooks-custom {
+	bleopt keymap_vi_imap_undo='more'
+	bleopt prompt_vi_mode_indicator='\g{fg=245}\q{keymap:vi/mode-indicator}'
+}
+blehook/eval-after-load keymap_vi vim-load-hooks-custom
+
+bleopt tab_width=4
+bleopt exec_errexit_mark=
+bleopt complete_auto_history=
+bleopt complete_auto_delay=1000
+bleopt complete_limit=200
+bleopt complete_menu_maxlines=10
+ble-face auto_complete='fg=240,underline,italic'
+ble-face -s region 'bg=243'
+
+ble-bind -m vi_nmap --cursor 2
+ble-bind -m vi_imap --cursor 5
+ble-bind -m vi_omap --cursor 4
+ble-bind -m vi_xmap --cursor 2
+ble-bind -m vi_smap --cursor 2
+ble-bind -m vi_cmap --cursor 0
+
+function ble/widget/sysclip-yank {
+	ble/widget/vi-command/operator y
+	wl-copy "$_ble_edit_kill_ring"
+}
+function ble/widget/sysclip-paste {
+	ble/keymap:vi/register#set 43 '' "$(wl-paste)"
+	ble/widget/vi_nmap/paste-after
+}
+ble-bind -m vi_xmap -f '" + y' sysclip-yank
+ble-bind -m vi_nmap -f '" + p' sysclip-paste
+
+function print_minutes {
+	local ralign="%$(($COLUMNS + 8))s"
+	local format='\e[94m[took %s mins]\e[m'
+	local mins=$((_ble_exec_time_ata / 1000 / 1000 / 60))
+	((mins >= 1)) || return 0
+
+	local str
+	ble/util/sprintf str "$format" "$mins"
+	ble/util/sprintf str "$ralign" "$str"
+	ble/util/print "$str"
+}
+blehook POSTEXEC+=print_minutes
