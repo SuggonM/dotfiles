@@ -18,5 +18,8 @@ Components: main
 Architectures: amd64
 Signed-By: /usr/share/keyrings/microsoft.gpg' | sudo tee /etc/apt/sources.list.d/vscode.sources
 
+# https://packagecloud.io/filips/FirefoxPWA
+curl -s https://packagecloud.io/install/repositories/filips/FirefoxPWA/script.deb.sh?any=true | sudo bash
+
 sudo apt-get update
-sudo apt-get install linux-wifi-hotspot obs-studio discord code-insiders
+sudo apt-get install linux-wifi-hotspot obs-studio discord code-insiders firefoxpwa
