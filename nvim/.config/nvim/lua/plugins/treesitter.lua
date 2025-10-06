@@ -4,8 +4,7 @@ return {{
 		local configs = require('nvim-treesitter.configs')
 		configs.setup {
 			ensure_installed = { 'css', 'javascript', 'bash', 'c', 'java', 'python', 'lua', 'markdown' },
-			highlight = { enable = true },
-			indent = { enable = true }
+			highlight = { enable = true }
 		}
 	end
 }}
