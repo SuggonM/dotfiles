@@ -10,6 +10,7 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 vim.o.linebreak = true
 vim.o.mousescroll = 'ver:1'  -- reduce touchpad sensitivity
+vim.g.netrw_dirhistmax = 0  -- disable '.netrwhist' file
 
 -- auto insert mode in :term
 vim.api.nvim_create_autocmd('TermOpen', {
