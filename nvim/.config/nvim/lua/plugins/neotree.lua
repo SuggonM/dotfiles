@@ -1,4 +1,4 @@
-return {{
+return {
 	'nvim-neo-tree/neo-tree.nvim',
 	branch = 'v3.x',
 	dependencies = {
@@ -15,6 +15,7 @@ return {{
 
 		require('neo-tree').setup({
 			close_if_last_window = true,
+			source_selector = { winbar = true },
 			window = {
 				position = 'right',
 				width = '25%'
@@ -31,4 +32,4 @@ return {{
 			}
 		})
 	end
-}}
+}

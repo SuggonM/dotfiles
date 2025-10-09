@@ -1,7 +1,7 @@
 return {}
 
 -- return {
--- 	"tiagovla/tokyodark.nvim",
+-- 	'tiagovla/tokyodark.nvim',
 
 -- 	config = function()
 -- 		require('tokyodark').setup({

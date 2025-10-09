@@ -1,6 +1,7 @@
 require('config.lazy')
 
 vim.o.number = true  -- line numbers
+vim.o.relativenumber = true
 vim.o.list = true  -- render whitespace chars
 vim.o.listchars = 'tab:→ ,nbsp:␣,trail:·,precedes:«,extends:»'
 vim.o.fillchars = 'eob: '  -- disable '~'
