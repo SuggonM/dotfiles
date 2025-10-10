@@ -11,7 +11,6 @@ return {
 		vim.api.nvim_create_autocmd('LspAttach', {
 			callback = function()
 				vim.diagnostic.config({ virtual_text = true })
-				vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action)
 			end
 		})
 	}
