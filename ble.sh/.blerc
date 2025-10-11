@@ -2,6 +2,7 @@
 # https://github.com/akinomyoga/ble.sh
 
 function vim-load-hooks-custom {
+	ble-import vim-surround
 	bleopt keymap_vi_imap_undo='more'
 	bleopt prompt_vi_mode_indicator='\g{fg=245}\q{keymap:vi/mode-indicator}'
 }
@@ -9,6 +10,7 @@ blehook/eval-after-load keymap_vi vim-load-hooks-custom
 
 bleopt tab_width=4
 bleopt exec_errexit_mark=
+bleopt exec_elapsed_mark=
 bleopt complete_auto_history=
 bleopt complete_auto_delay=1000
 bleopt complete_limit=200
