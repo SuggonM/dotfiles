@@ -25,7 +25,8 @@ return {
 				filtered_items = {
 					visible = true,
 					never_show = { '.git' }
-				}
+				},
+				follow_current_file = { enabled = true }
 			},
 			default_component_configs = {
 				name = { trailing_slash = true }
