@@ -1,8 +1,11 @@
 return {
-	'kylechui/nvim-surround',
-	event = 'VeryLazy',
+	{ 'jiangmiao/auto-pairs' },
+	{
+		'kylechui/nvim-surround',
+		event = 'VeryLazy',
 
-	config = function()
-		require('nvim-surround').setup()
-	end
+		config = function()
+			require('nvim-surround').setup()
+		end
+	}
 }
