@@ -25,11 +25,25 @@ function obsidian {
 	sudo apt-get install /tmp/obsidian.deb
 }
 
+# https://insomnia.rest/download
+function insomnia {
+	local url="https://updates.insomnia.rest/downloads/ubuntu/latest"
+	wget -q --show-progress -O /tmp/insomnia.deb "$url"
+	sudo apt-get install /tmp/insomnia.deb
+}
+
 # https://www.terabox.com/terabox-cloud-storage-for-pc-free-download
 function terabox {
 	local url="https://www.terabox.com/api/getsyscfg?clienttype=0&language_type=en&cfg_category_keys=%5B%5D&version=0"
 	wget -q --show-progress -O /tmp/terabox.deb $(curl -sS "$url" | jq -r ".fe_linux_download_setting.cfg_list[0].deb_url")
 	sudo apt-get install /tmp/terabox.deb
+}
+
+# https://software.opensuse.org/download.html?project=home:archcrack&package=clifm
+function clifm {
+	local url="https://software.opensuse.org/download/package.json?project=home:archcrack&package=clifm"
+	wget -q --show-progress -O /tmp/clifm.deb $(curl -sS "$url" | jq | grep -o "https://.*.xUbuntu_.*.deb" | fzf)
+	sudo apt-get install /tmp/clifm.deb
 }
 
 # invoke update function: either arg 1 or interactive fzf
