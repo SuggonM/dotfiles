@@ -25,6 +25,13 @@ function obsidian {
 	sudo apt-get install /tmp/obsidian.deb
 }
 
+# https://vscodium.com/#install
+function vscodium {
+	local url="https://api.github.com/repos/VSCodium/vscodium/releases/latest"
+	wget -q --show-progress -O /tmp/vscodium.deb $(curl -sS "$url" | grep -o 'https://.*_amd64.deb' | head -n1)
+	sudo apt-get install /tmp/vscodium.deb
+}
+
 # https://insomnia.rest/download
 function insomnia {
 	local url="https://updates.insomnia.rest/downloads/ubuntu/latest"
