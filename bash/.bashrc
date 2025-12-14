@@ -4,6 +4,11 @@ BLESH="$HOME/.local/share/blesh/ble.sh"
 
 source "$HOME/.bashrc_default"
 
+if [[ -n $SSH_CONNECTION ]] && [[ $- == *i* ]]; then
+	# fastfetch --logo none
+	neofetch --backend off
+fi
+
 function set_dollar {
 	[[ ${__vsc_status:-$?} -eq 0 ]] &&
 		DOLLAR="\[\033[01;31m\]\$\001\002_" ||
@@ -25,11 +30,6 @@ prompt() {
 	PS1="${NEWLINE}\[\033[01;32m\][\#]\[\033[00m\]: \[\033[01;34m\]../\W/ ${LINEBREAK}${DOLLAR}\[\033[00m\] ${VIRTUAL_ENV_PROMPT}"
 }
 PROMPT_COMMAND="prompt"
-
-if [[ -n $SSH_CONNECTION ]]; then
-	# fastfetch --logo none
-	neofetch --backend off
-fi
 
 [[ ! ${BLE_VERSION-} ]] || ble-attach
 
