@@ -1,7 +1,6 @@
 return {
 	'mason-org/mason-lspconfig.nvim',
 
-	-- enabled = false,
 	opts = {
 		ensure_installed = { 'lua_ls', 'cssls', 'ts_ls' }
 	},
