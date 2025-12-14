@@ -4,6 +4,10 @@ BLESH="$HOME/.local/share/blesh/ble.sh"
 
 source "$HOME/.bashrc_default"
 
+shopt -s globstar
+shopt -s autocd
+eval $(lesspipe)
+
 if [[ -n $SSH_CONNECTION ]] && [[ $- == *i* ]]; then
 	# fastfetch --logo none
 	neofetch --backend off
