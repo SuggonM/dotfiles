@@ -18,17 +18,12 @@ return {
 				vim.diagnostic.config({
 					virtual_text = true,
 					signs = {
-						text = {
-							[vim.diagnostic.severity.HINT] = '',
-							[vim.diagnostic.severity.INFO] = '',
-							[vim.diagnostic.severity.WARN] = '',
-							[vim.diagnostic.severity.ERROR] = ''
-						},
+						text = { '', '', '', '' },
 						numhl = {
-							[vim.diagnostic.severity.HINT] = 'DiagnosticHint',
-							[vim.diagnostic.severity.INFO] = 'DiagnosticInfo',
-							[vim.diagnostic.severity.WARN] = 'WarningMsg',
-							[vim.diagnostic.severity.ERROR] = 'ErrorMsg',
+							'ErrorMsg',
+							'WarningMsg',
+							'DiagnosticInfo',
+							'DiagnosticHint'
 						}
 					}
 				})
