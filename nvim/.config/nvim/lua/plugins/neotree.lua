@@ -7,6 +7,8 @@ return {
 		'nvim-tree/nvim-web-devicons'
 	},
 	lazy = false,
+	-- load "slow" to prevent others from overriding neotree keybind
+	priority = -1,
 
 	config = function()
 		vim.keymap.set('n', '<leader>e', function()
