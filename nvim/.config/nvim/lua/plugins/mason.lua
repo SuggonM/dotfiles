@@ -12,9 +12,6 @@ return {
 		vim.api.nvim_create_autocmd('LspAttach', {
 			callback = function()
 				vim.keymap.set('n', 'grf', vim.lsp.buf.format)
-				vim.lsp.config('*', {
-					capabilities = require('cmp_nvim_lsp').default_capabilities()
-				})
 				vim.diagnostic.config({
 					virtual_text = true,
 					signs = {
