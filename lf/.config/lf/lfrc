@@ -1,0 +1,5 @@
+set hidden
+set mouse
+set previewer ctpv
+map i $bat "$f"
+map D delete "$f"
