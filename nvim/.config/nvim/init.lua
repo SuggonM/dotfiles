@@ -13,6 +13,10 @@ vim.o.linebreak = true
 vim.o.mousescroll = 'ver:1'  -- reduce touchpad sensitivity
 vim.o.winborder = 'rounded'
 vim.g.netrw_dirhistmax = 0  -- disable '.netrwhist' file
+vim.o.undofile = true
+vim.o.cursorline = true
+vim.api.nvim_set_hl(0, 'CursorLine', { bg = '#1f1f1f' })
+vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = '#ffffff' })
 
 -- auto insert mode in :term
 vim.api.nvim_create_autocmd('TermOpen', {
