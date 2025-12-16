@@ -26,3 +26,11 @@ vim.api.nvim_create_autocmd('TermOpen', {
 		vim.cmd('startinsert')
 	end
 })
+
+-- permanently disable "//" auto-insert on new line
+vim.api.nvim_create_autocmd('FileType', {
+	pattern = '*',
+	callback = function()
+		vim.o.formatoptions = vim.o.formatoptions:gsub('[ro]', '')
+	end
+})
