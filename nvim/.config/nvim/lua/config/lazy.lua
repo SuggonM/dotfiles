@@ -35,10 +35,6 @@ require("lazy").setup({
   checker = { enabled = true },
 })
 
-vim.keymap.set('n', '<leader>lzi', function()
-	vim.cmd('Lazy install')
-end)
-
 vim.keymap.set('n', '<leader>lzu', function()
 	vim.cmd('Lazy update')
 end)
