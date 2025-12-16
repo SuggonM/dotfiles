@@ -1,12 +1,11 @@
 return {
 	'mfussenegger/nvim-dap',
 	dependencies = {
-		'theHamsta/nvim-dap-virtual-text',
+		{ 'theHamsta/nvim-dap-virtual-text', opts = {}},
 		'igorlfs/nvim-dap-view'
 	},
 
 	config = function()
-		require('nvim-dap-virtual-text').setup()
 		local dap = require('dap')
 		local dapview = require('dap-view')
 

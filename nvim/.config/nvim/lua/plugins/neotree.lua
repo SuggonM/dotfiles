@@ -10,29 +10,26 @@ return {
 	-- load "slow" to prevent others from overriding neotree keybind
 	priority = -1,
 
-	config = function()
-		vim.keymap.set('n', '<leader>e', function()
-			vim.cmd('Neotree')
-		end)
-
-		require('neo-tree').setup({
-			close_if_last_window = true,
-			source_selector = { winbar = true },
-			window = {
-				position = 'right',
-				width = '25%'
+	keys = {
+		{ '<leader>e', vim.cmd.Neotree }
+	},
+	opts = {
+		close_if_last_window = true,
+		source_selector = { winbar = true },
+		window = {
+			position = 'right',
+			width = '25%'
+		},
+		filesystem = {
+			hijack_netrw_behavior = 'open_current',
+			filtered_items = {
+				visible = true,
+				never_show = { '.git' }
 			},
-			filesystem = {
-				hijack_netrw_behavior = 'open_current',
-				filtered_items = {
-					visible = true,
-					never_show = { '.git' }
-				},
-				follow_current_file = { enabled = true }
-			},
-			default_component_configs = {
-				name = { trailing_slash = true }
-			}
-		})
-	end
+			follow_current_file = { enabled = true }
+		},
+		default_component_configs = {
+			name = { trailing_slash = true }
+		}
+	}
 }

@@ -6,30 +6,33 @@ return {
 		'nvim-telescope/telescope-ui-select.nvim'
 	},
 
-	config = function()
-		require('telescope').setup({
-			pickers = {
-				find_files = {
-					-- https://www.reddit.com/r/neovim/comments/nspg8o/comment/h0owlue/
-					find_command = { 'rg', '--files', '--iglob', '!.git', '--hidden' }
-				}
-			},
-			extensions = {
-				['ui-select'] = require('telescope.themes').get_dropdown()
-			}
-		})
-		require('telescope').load_extension('ui-select')
+	keys = {
+		{ '<C-p>',      ':Telescope find_files<cr>' },
+		{ '<leader>ff', ':Telescope find_files<cr>' },
+		{ '<leader>fg', ':Telescope live_grep<cr>' },
+		{ '<leader>fh', ':Telescope help_tags<cr>' },
+		{ '<leader>fb', ':Telescope buffers<cr>' },
+	},
 
-		local builtin = require('telescope.builtin')
-		vim.keymap.set('n', '<C-p>',      builtin.find_files)
-		vim.keymap.set('n', '<leader>ff', builtin.find_files)
-		vim.keymap.set('n', '<leader>fg', builtin.live_grep)
-		vim.keymap.set('n', '<leader>fh', builtin.help_tags)
-		vim.keymap.set('n', '<leader>fb', builtin.buffers)
+	opts = {
+		pickers = {
+			find_files = {
+				-- https://www.reddit.com/r/neovim/comments/nspg8o/comment/h0owlue/
+				find_command = { 'rg', '--files', '--iglob', '!.git', '--hidden' }
+			}
+		},
+		extensions = {
+			['ui-select'] = require('telescope.themes').get_dropdown()
+		}
+	},
+
+	config = function(_, opts)
+		require('telescope').setup(opts)
+		require('telescope').load_extension('ui-select')
 
 		-- quick access nvim configs from any location
 		vim.keymap.set('n', '<leader>nv', function()
-			builtin.find_files({ cwd = vim.fn.stdpath('config') })
+			require('telescope.builtin').find_files({ cwd = vim.fn.stdpath('config') })
 		end)
 	end
 }
