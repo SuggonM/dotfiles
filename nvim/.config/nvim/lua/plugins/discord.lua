@@ -4,7 +4,7 @@ return {
 
 	opts = {
 		editor = {
-			tooltip = 'The command-line text editor'
+			tooltip = 'The superior command-line text editor'
 		},
 		display = {
 			theme = 'default',
