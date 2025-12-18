@@ -1,8 +1,6 @@
+---@type LazySpec
 return {
-	{ 'jiangmiao/auto-pairs' },
-	{
-		'kylechui/nvim-surround',
-		event = 'VeryLazy',
-		opts = {}
-	}
+	'kylechui/nvim-surround',
+	event = 'VeryLazy',
+	opts = {}
 }
