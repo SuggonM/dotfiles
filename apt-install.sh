@@ -2,35 +2,35 @@
 
 pkgs=(
 	adb
-	aha
+	aha  # convert terminal output into html
 	anacron
 	aptitude
-	atool
-	axel
+	atool  # archive listing integration with `lf`
+	axel  # download accelerator
 	batcat
 	bd
-	build-essential
+	build-essential  # compile software from source
 	catimg
 	cmake
 	dconf-editor
-	default-jdk
+	default-jdk  # java JDK
 	drawing
 	fastfetch
-	fd-find
+	fd-find  # `find` alternative, nvim-telescope dependency
 	ffmpeg
 	flatpak
 	font-manager
-	fprintd
+	fprintd  # linux fingerprint interface. no driver for my PC so f**k the manufacturer
 	fzf
 	gh
 	gnome-boxes
 	gnome-shell-extension-manager
 	gnome-software
 	gnome-software-plugin-flatpak
-	gnome-tweaks
+	gnome-tweaks  # set dark theme on legacy GTK apps
 	gparted
 	hexedit
-	ibus-mozc
+	ibus-mozc  # Japanese input
 	input-remapper
 	jq
 	lazygit
@@ -38,7 +38,7 @@ pkgs=(
 	lolcat
 	lua5.4
 	lynx
-	mozc-utils-gui
+	mozc-utils-gui  # Mozc dependency
 	ncdu
 	neovim
 	net-tools
@@ -48,8 +48,8 @@ pkgs=(
 	postgresql
 	python3-pip
 	qalc
-	rar
-	ripgrep
+	rar  # this is trial version btw :)
+	ripgrep  # nvim-telescope dependency
 	ruby
 	samba
 	scrcpy
@@ -61,13 +61,12 @@ pkgs=(
 	traceroute
 	translate-shell
 	tree
-	vim-common
 	wireshark
 	wl-clipboard
 	woff2
-	x11-apps
-	xxd
-	ydotool
+	x11-apps  # detect Xwayland with xeyes
+	xxd  # colorful hexdump
+	ydotool  # auto clikcer
 	yq
 )
 
