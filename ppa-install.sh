@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 sudo add-apt-repository -y ppa:lakinduakash/lwh
 sudo add-apt-repository -y ppa:obsproject/obs-studio
 

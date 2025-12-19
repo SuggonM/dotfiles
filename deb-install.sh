@@ -1,5 +1,7 @@
 #!/bin/env bash
 
+set -e
+
 # https://tailscale.com/download/linux
 function tailscale {
 	curl -fsSL https://tailscale.com/install.sh | sh

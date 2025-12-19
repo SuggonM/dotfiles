@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 pkgs=(
 	adb
 	aha  # convert terminal output into html
