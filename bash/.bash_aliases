@@ -1,16 +1,12 @@
 alias abd="sl"
 alias bat="batcat"
 alias s3="aws s3 --no-sign-request"
-alias mariadb="mariadb -u root"
 alias python="python3"
 alias code="code-insiders"
 alias activate="source ~/.venv/bin/activate"
-alias ptyxis="flatpak run app.devsuite.Ptyxis --tab"
 alias glog="git log --all --graph --pretty=format:'%C(auto)%h – %s  %d %C(bold green)(%ar) %C(cyan)<%aN>%Creset'"
 alias diff="git diff --no-index"
-alias fileserver="systemctl --user start fileserver"
-alias smbd="sudo /usr/sbin/smbd --foreground --no-process-group $SMBDOPTIONS"
-alias adbconnect='adb connect redmi:$(nmap -sT -p30000-50000 redmi | tee /dev/stderr | grep -oP "^\d+")'
+alias smbd="sudo /usr/sbin/smbd --foreground --no-process-group"
 alias vim="nvim"
 alias rebash="source ~/.bashrc"
 alias fuck-it="sudo reboot" # use this trump card whenever a program says "your device needs a restart"
@@ -33,16 +29,4 @@ function adb {
 # grep a pattern in bash history
 function hist {
 	history | grep "$@" --color=always | grep -n ' '
-}
-
-# unused function
-function wl-cb {
-	local clipfile="$HOME/.clipboard"
-	if [ -t 0 ]; then
-		# tty input: paste
-		[ -f "$clipfile" ] && cat "$clipfile"
-	else
-		# piped input: copy
-		cat > "$clipfile"
-	fi
 }

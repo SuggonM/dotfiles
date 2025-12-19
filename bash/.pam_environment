@@ -1,0 +1,15 @@
+# vscode?, losslesscut
+ELECTRON_OZONE_PLATFORM_HINT=auto
+
+# scrcpy
+SDL_VIDEODRIVER=wayland
+
+# git, systemctl
+LESS=FR
+SYSTEMD_LESS=FR
+
+# <C-x> <C-e> (edit terminal command)
+EDITOR=vim
+
+# sudoedit
+SUDO_EDITOR=vim
