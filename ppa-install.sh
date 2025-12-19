@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 
 sudo add-apt-repository -y ppa:lakinduakash/lwh
 sudo add-apt-repository -y ppa:obsproject/obs-studio
@@ -10,5 +10,12 @@ sudo tee /etc/apt/sources.list.d/javinator9889-ppa.list <<< "deb [arch=amd64 sig
 # https://packagecloud.io/filips/FirefoxPWA
 curl -s https://packagecloud.io/install/repositories/filips/FirefoxPWA/script.deb.sh?any=true | sudo bash
 
+pkgs=(
+	linux-wifi-hotspot
+	obs-studio
+	discord
+	firefoxpwa
+)
+
 sudo apt-get update
-sudo apt-get install linux-wifi-hotspot obs-studio discord firefoxpwa
+sudo apt-get install ${pkgs[@]}
