@@ -18,6 +18,11 @@ vim.o.cursorline = true
 vim.api.nvim_set_hl(0, 'CursorLine', { bg = '#1f1f1f' })
 vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = '#ffffff' })
 
+-- avoid 'block' cursor in TTY to avoid weird character rendering
+if os.getenv.XDG_SESSION_TYPE == 'tty' then
+	vim.o.guicursor = vim.o.guicursor .. ',n-c:ver25'
+end
+
 -- auto insert mode in :term
 vim.api.nvim_create_autocmd('TermOpen', {
 	pattern = '*',
