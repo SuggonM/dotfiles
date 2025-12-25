@@ -1,3 +1,6 @@
+---@type LazySpec
 return {
-	'jiangmiao/auto-pairs'
+	'windwp/nvim-autopairs',
+	event = 'InsertEnter',
+	opts = {}
 }
