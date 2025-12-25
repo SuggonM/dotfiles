@@ -14,7 +14,7 @@ alias gssh="gh cs ssh"
 alias ssh-vps='gh cs ssh --repo SuggonM/ghcs-vps "cd /workspaces/* && ./start.sh"'
 alias vps="tmux new -A -dt vps && tmux send-keys -t vps 'ssh-vps' C-m"
 alias wlocate="locate --database /var/lib/plocate/plocate-windows.db"
-alias wupdatedb="updatedb --database-root /mnt/c -o /var/lib/plocate/plocate-windows.db"
+alias wupdatedb="updatedb --database-root /media/suggon/c -o /var/lib/plocate/plocate-windows.db"
 alias sudo="sudo " # https://askubuntu.com/a/22043/1873035
 
 # when using adb pull, auto add -a (preserve timestamp) flag

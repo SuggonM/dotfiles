@@ -8,8 +8,6 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-[safe]
-	directory = /mnt/c/*
 
 # for easier auth, always use SSH url when cloning and adding origin
 [url "git@github.com:"]
