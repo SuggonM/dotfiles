@@ -2,4 +2,8 @@
 LABEL=Ubuntu  /           ext4   defaults                                          0      1
 LABEL=ESP     /boot/efi   vfat   defaults,fmask=133                                0      2
 LABEL=Acer    /mnt/c      ntfs   defaults,fmask=133,dmask=022,uid=1000,x-gvfs-show 0      2
+LABEL=BlissOS /mnt/bstemp ext4   defaults,nofail                                   0      2
 /swap.img     none        swap   defaults                                          0      0
+
+# binds
+/mnt/bstemp/android-2024-10-11/data  /mnt/bliss  none  bind,x-gvfs-show            0      0
