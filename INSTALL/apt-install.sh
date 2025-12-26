@@ -68,7 +68,7 @@ pkgs=(
 	woff2
 	x11-apps  # detect Xwayland with xeyes
 	xxd  # colorful hexdump
-	ydotool  # auto clikcer
+	ydotool  # auto clicker
 	yq
 )
 
