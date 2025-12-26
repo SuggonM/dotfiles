@@ -1,0 +1,15 @@
+extensions.conf  linguist-language=Git-Config
+fstab            linguist-language=Shell
+os-release       linguist-language=Shell
+updatedb.conf    linguist-language=Shell
+shares.conf      linguist-language=Git-Config
+sshd.conf        linguist-language=SSH-Config
+.bashrc_default  linguist-language=Shell
+.pam_environment linguist-language=Shell
+.blerc           linguist-language=Shell
+flatpak/**       linguist-language=Git-Config
+gimprc           linguist-language=Scheme
+sessionrc        linguist-language=Scheme
+lfrc             linguist-language=Vim-Script
+ptyxis/**        linguist-language=Git-Config
+config           linguist-language=SSH-Config
