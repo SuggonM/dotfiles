@@ -28,14 +28,8 @@ exts=(
 	"System_Monitor@bghome.gmail.com"
 	"touchpad-gesture-customization@coooolapps.com"
 	"unity-like-appswitcher@gonza.com"
+	"start-overlay-in-application-view@Hex_cz"
 )
 
-venv_dir="$HOME/.venv"
-activate="$venv_dir/bin/activate"
-[[ -f "$activate" ]] || ( echo "Initialize the ~/.venv first." && exit 1 )
-
-cd $venv_dir
-source $activate
-pip install --upgrade git+https://github.com/essembeh/gnome-extensions-cli
-
-gext install ${exts[@]}
+pipx install gnome-extensions-cli --system-site-packages
+gext --dbus install ${exts[@]}

@@ -46,6 +46,7 @@ pkgs=(
 	net-tools
 	nmap
 	openssh-server
+	pipx
 	plocate
 	postgresql
 	python3-pip
