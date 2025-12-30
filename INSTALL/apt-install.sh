@@ -22,7 +22,7 @@ pkgs=(
 	ffmpeg
 	flatpak
 	font-manager
-	fprintd  # linux fingerprint interface. no driver for my PC so f**k the manufacturer
+	fprintd  # linux fingerprint interface
 	fzf
 	gh
 	gnome-boxes
