@@ -9,7 +9,6 @@ pkgs=(
 	aptitude
 	arch-install-scripts  # arch-chroot is too convenient
 	atool  # archive listing integration with `lf`
-	axel  # download accelerator
 	batcat
 	bd
 	build-essential  # compile software from source
@@ -34,8 +33,8 @@ pkgs=(
 	gparted
 	hexedit
 	ibus-mozc  # Japanese input
-	input-remapper
 	jq
+	keyd  # key remap
 	lazygit
 	lf
 	lolcat
