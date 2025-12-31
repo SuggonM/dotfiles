@@ -20,4 +20,4 @@ pkgs=(
 )
 
 sudo apt-get update
-sudo apt-get install ${pkgs[@]}
+sudo apt-get install "${pkgs[@]}"

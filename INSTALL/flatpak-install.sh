@@ -12,4 +12,4 @@ flatpaks=(
 	org.mozilla.firefox
 )
 
-flatpak --user install ${flatpaks[@]}
+flatpak --user install "${flatpaks[@]}"

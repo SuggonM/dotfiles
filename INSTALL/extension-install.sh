@@ -32,4 +32,4 @@ exts=(
 )
 
 pipx install gnome-extensions-cli --system-site-packages
-gext --dbus install ${exts[@]}
+gext --dbus install "${exts[@]}"
