@@ -1,6 +1,7 @@
 # <device>    <dir>       <type> <options>                                         <dump> <fsck>
 LABEL=Ubuntu  /           ext4   defaults                                          0      1
-LABEL=ESP     /boot/efi   vfat   defaults,fmask=133                                0      2
+LABEL=ESP     /efi        vfat   defaults,fmask=133                                0      2
+LABEL=Arch    /mnt/arch   ext4   defaults,nofail,x-gvfs-show                       0      2
 LABEL=BlissOS /mnt/bstemp ext4   defaults,nofail                                   0      2
 /swap.img     none        swap   defaults                                          0      0
 

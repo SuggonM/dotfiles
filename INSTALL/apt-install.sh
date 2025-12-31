@@ -7,6 +7,7 @@ pkgs=(
 	aha  # convert terminal output into html
 	anacron
 	aptitude
+	arch-install-scripts  # arch-chroot is too convenient
 	atool  # archive listing integration with `lf`
 	axel  # download accelerator
 	batcat
