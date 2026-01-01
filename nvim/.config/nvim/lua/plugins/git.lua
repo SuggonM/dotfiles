@@ -8,8 +8,8 @@ return {
 		{ '<leader>gh', ':Gitsigns stage_hunk<cr>', mode = { 'n', 'x' }},
 		{ '<leader>gp', ':Gitsigns preview_hunk<cr>'  },
 		{ '<leader>gv', ':Gitsigns select_hunk<cr>'   },
-		{ '<leader>g[', ':Gitsigns nav_hunk prev<cr>' },
-		{ '<leader>g]', ':Gitsigns nav_hunk next<cr>' }
+		{ '[g', ':Gitsigns nav_hunk prev<cr>' },
+		{ ']g', ':Gitsigns nav_hunk next<cr>' }
 	},
 
 	opts = {
