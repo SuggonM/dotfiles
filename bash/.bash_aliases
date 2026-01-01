@@ -17,6 +17,7 @@ alias wlocate="locate --database /var/lib/plocate/plocate-windows.db"
 alias wupdatedb="updatedb --database-root /media/suggon/c -o /var/lib/plocate/plocate-windows.db"
 alias sudo="sudo " # https://askubuntu.com/a/22043/1873035
 alias archroot="sudo arch-chroot /mnt/arch su - suggon"
+alias cp="cp --preserve=timestamps"
 
 # when using adb pull, auto add -a (preserve timestamp) flag
 function adb {
