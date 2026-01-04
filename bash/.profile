@@ -26,7 +26,7 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-# ensure PAM variables are sourced, even in non-systemd session (chroot)
+# ensure PAM variables are sourced, even in non-systemd session (chroots)
 set -o allexport
 source "$HOME/.pam_environment"
 set +o allexport

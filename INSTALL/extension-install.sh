@@ -4,6 +4,7 @@ set -e
 
 exts=(
 	"allowlockedremotedesktop@kamens.us"
+	"appindicatorsupport@rgcjonas.gmail.com"
 	"arcmenu@arcmenu.com"
 	"blur-my-shell@aunetx"
 	"clipboard-indicator@tudmotu.com"
@@ -25,10 +26,10 @@ exts=(
 	"mediacontrols@cliffniff.github.com"
 	"one-thing@github.com"
 	"simple-timer@majortomvr.github.com"
+	"start-overlay-in-application-view@Hex_cz"
 	"System_Monitor@bghome.gmail.com"
 	"touchpad-gesture-customization@coooolapps.com"
 	"unity-like-appswitcher@gonza.com"
-	"start-overlay-in-application-view@Hex_cz"
 )
 
 pipx install gnome-extensions-cli --system-site-packages

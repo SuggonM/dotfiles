@@ -10,7 +10,6 @@ pkgs=(
 	arch-install-scripts  # arch-chroot is too convenient
 	atool  # archive listing integration with `lf`
 	batcat
-	bd
 	build-essential  # compile software from source
 	catimg
 	cmake
@@ -64,7 +63,6 @@ pkgs=(
 	traceroute
 	translate-shell
 	tree
-	wireshark
 	wl-clipboard
 	woff2
 	x11-apps  # detect Xwayland with xeyes

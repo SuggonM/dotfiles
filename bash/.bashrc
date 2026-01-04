@@ -1,6 +1,9 @@
+# skip bashrc if not running interactively
+[[ $- != *i* ]] && return
+
 # https://github.com/akinomyoga/ble.sh#13-set-up-bashrc
 BLESH="$HOME/.local/share/blesh/ble.sh"
-[[ -f $BLESH ]] && [[ $- == *i* ]] && source -- "$BLESH" --attach=none
+[[ -f $BLESH ]] && source -- "$BLESH" --attach=none
 
 source "$HOME/.bashrc_default"
 
@@ -8,7 +11,7 @@ shopt -s globstar
 shopt -s autocd
 eval $(lesspipe)
 
-if [[ -n $SSH_CONNECTION ]] && [[ $- == *i* ]]; then
+if [[ -n $SSH_CONNECTION ]]; then
 	# fastfetch --logo none
 	neofetch --backend off
 fi
