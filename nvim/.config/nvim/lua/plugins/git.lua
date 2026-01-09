@@ -23,9 +23,11 @@ return {
 		word_diff = true,
 		attach_to_untracked = true,
 		on_attach = function()
-			vim.api.nvim_set_hl(0, 'GitSignsChange', { fg = '#005fff' })
+			vim.api.nvim_set_hl(0, 'GitSignsChange', { fg = '#ffb000' })
 			vim.api.nvim_set_hl(0, 'GitSignsAddLnInline', { bg = '#004000' })
 			vim.api.nvim_set_hl(0, 'GitSignsDeleteLnInline', { bg = '#400000' })
+			-- green (added) + red (deleted) = yellow (modified). beautiful, innit?
+			vim.api.nvim_set_hl(0, 'GitSignsChangeInline', { bg = '#404000' })
 		end
 	}
 }
