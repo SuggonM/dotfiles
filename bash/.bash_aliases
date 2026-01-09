@@ -27,6 +27,15 @@ function adb {
 	fi
 }
 
+# set the minimum envs required inside chroot to share host's wayland
+function wl-extend {
+	export WAYLAND_DISPLAY=wayland-0
+	export XDG_RUNTIME_DIR=/run/user/1000
+	local realhost=$(cat /proc/sys/kernel/hostname)
+	echo Run in host shell:
+	echo sudo mount --bind /run/user/1000/ /mnt/$realhost/run/user/1000/
+}
+
 # grep a pattern in bash history
 function hist {
 	history | grep "$@" --color=always | grep -n ' '
