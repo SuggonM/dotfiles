@@ -17,9 +17,11 @@ if [[ -n $SSH_CONNECTION ]]; then
 fi
 
 function set_dollar {
-	[[ ${__vsc_status:-$?} -eq 0 ]] &&
-		DOLLAR="\[\033[01;31m\]\$\001\002_" ||
-		DOLLAR="\[\033[01;97m\]\[\033[01;41m\]\$\[\033[01;49m\]_"
+	[[ -n $(jobs -p) ]] && DOLLAR_SIGN=% || DOLLAR_SIGN=$
+
+	[[ $status -eq 0 ]] &&
+		DOLLAR="\[\033[01;31m\]$DOLLAR_SIGN\001\002_" ||
+		DOLLAR="\[\033[01;97m\]\[\033[01;41m\]$DOLLAR_SIGN\[\033[01;49m\]_"
 }
 function set_newline {
 	NEWLINE="$NEWLINE_"
@@ -30,6 +32,7 @@ function set_linebreak {
 }
 
 prompt() {
+	status=$?
 	set_dollar
 	set_newline
 	set_linebreak
