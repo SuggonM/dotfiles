@@ -11,9 +11,6 @@ return {
 			theme = 'default',
 			flavor = 'accent'
 		},
-		timestamp = {
-			enabled = false
-		},
 		text = {
 			workspace = function(opts)
 				return string.format('In ../%s/', opts.workspace)
