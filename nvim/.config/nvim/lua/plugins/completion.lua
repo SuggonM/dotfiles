@@ -24,8 +24,9 @@ return {
 				end
 			},
 			window = {
-				completion = cmp.config.window.bordered(),
-				documentation = cmp.config.window.bordered()
+				-- https://github.com/hrsh7th/nvim-cmp/issues/2210
+				completion = cmp.config.window.bordered({ border = 'rounded' }),
+				documentation = cmp.config.window.bordered({ border = 'rounded' })
 			},
 			mapping = cmp.mapping.preset.insert({
 				['<C-b>'] = cmp.mapping.scroll_docs(-4),

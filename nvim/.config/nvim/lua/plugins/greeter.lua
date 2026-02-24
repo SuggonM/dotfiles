@@ -1,6 +1,7 @@
 ---@type LazySpec
 return {
-	'goolord/alpha-nvim',
+	'SuggonM/alpha-nvim',
+	branch = 'fix-config-btn',
 	dependencies = { 'nvim-tree/nvim-web-devicons' },
 
 	config = function()
