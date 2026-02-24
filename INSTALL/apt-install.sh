@@ -24,6 +24,7 @@ pkgs=(
 	fprintd  # linux fingerprint interface
 	fzf
 	gh
+	git-delta
 	gnome-boxes
 	gnome-shell-extension-manager
 	gnome-software
