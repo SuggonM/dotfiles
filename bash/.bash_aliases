@@ -37,3 +37,14 @@ function wl-extend {
 function hist {
 	history | grep "$@" --color=always | grep -n ' '
 }
+
+function printargs {
+	echo "Total args: $#"
+	i=1
+	for arg in "$@"; do
+		echo "arg $i: '$arg'"
+		((i++))
+	done
+}
+# make it available inside subshells
+export -f printargs
