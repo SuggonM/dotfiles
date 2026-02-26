@@ -9,7 +9,7 @@ LESS=FR
 SYSTEMD_LESS=FR
 
 # <C-x> <C-e> (edit terminal command)
-EDITOR=vim
+EDITOR=nvim
 
 # sudoedit
-SUDO_EDITOR=vim
+SUDO_EDITOR=nvim
