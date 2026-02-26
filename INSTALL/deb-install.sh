@@ -1,5 +1,4 @@
 #!/bin/env bash
-
 set -e
 
 # https://tailscale.com/download/linux
@@ -55,7 +54,7 @@ function clifm {
 	sudo apt-get install /tmp/clifm.deb
 }
 
-# invoke update function: either arg 1 or interactive fzf
+# list all functions and run the one selected by user
 apps=$(cat $0 | grep '^function .* {' | awk '{print $2}')
-selected=$([ -n "$1" ] && echo "$1" || (echo "$apps" | fzf))
+selected=$(echo "$apps" | fzf)
 $selected

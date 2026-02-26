@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
-
 set -e
+
+if ! command -v fzf > /dev/null; then
+	sudo apt-get update
+	sudo apt-get install fzf
+fi
 
 pkgs=(
 	adb
@@ -72,5 +76,12 @@ pkgs=(
 	yq
 )
 
+selected=(
+	$(printf '%s\n' "${pkgs[@]}" | fzf --multi --bind ctrl-a:select-all)
+)
+
+echo "Selected:"
+printf '%s\n' "${selected[@]}" | column
+
 sudo apt-get update
-sudo apt-get install "${pkgs[@]}"
+sudo apt-get install "${selected[@]}"
