@@ -4,10 +4,11 @@ return {
 
 	lazy = false,
 	keys = {
-		{ '<leader>ga', ':Gitsigns stage_buffer<cr>'  },
+		{ '<leader>ga', ':Gitsigns stage_buffer<cr>' },
 		{ '<leader>gh', ':Gitsigns stage_hunk<cr>', mode = { 'n', 'x' }},
-		{ '<leader>gp', ':Gitsigns preview_hunk<cr>'  },
-		{ '<leader>gv', ':Gitsigns select_hunk<cr>'   },
+		{ '<leader>gp', ':Gitsigns preview_hunk<cr>' },
+		{ '<leader>gv', ':Gitsigns select_hunk<cr>' },
+		{ '<leader>gr', ':Gitsigns reset_hunk<cr>' },
 		{ '[g', ':Gitsigns nav_hunk prev<cr>' },
 		{ ']g', ':Gitsigns nav_hunk next<cr>' }
 	},
