@@ -4,9 +4,10 @@ set -e
 flatpaks=(
 	app.devsuite.Ptyxis
 	app.zen_browser.zen
+	com.github.dynobo.normcap
 	com.github.tchx84.Flatseal
-	com.github.tenderowl.frog
 	com.spotify.Client
+	com.usebottles.bottles
 	org.gimp.GIMP
 	org.gnome.World.Iotas
 	org.localsend.localsend_app

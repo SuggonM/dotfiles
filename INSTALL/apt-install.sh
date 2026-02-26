@@ -14,12 +14,13 @@ pkgs=(
 	arch-install-scripts  # arch-chroot is too convenient
 	atool  # archive listing integration with `lf`
 	batcat
+	bindfs  # bind-mount with altered ownership
 	build-essential  # compile software from source
 	catimg
 	cmake
 	dconf-editor
 	default-jdk  # java JDK
-	drawing
+	docker.io
 	fastfetch
 	fd-find  # `find` alternative, nvim-telescope dependency
 	ffmpeg
@@ -33,6 +34,7 @@ pkgs=(
 	gnome-shell-extension-manager
 	gnome-software
 	gnome-software-plugin-flatpak
+	gnome-sushi  # quick file preview from Nautilus
 	gnome-tweaks  # set dark theme on legacy GTK apps
 	gparted
 	hexedit
@@ -44,6 +46,7 @@ pkgs=(
 	lolcat
 	lua5.4
 	lynx
+	mediainfo
 	mozc-utils-gui  # Mozc dependency
 	ncdu
 	neovim
@@ -55,6 +58,7 @@ pkgs=(
 	postgresql
 	python3-pip
 	qalc
+	radare2  # disassembler
 	rar  # this is trial version btw :)
 	ripgrep  # nvim-telescope dependency
 	ruby
