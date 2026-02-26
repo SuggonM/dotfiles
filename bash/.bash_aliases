@@ -38,6 +38,13 @@ function hist {
 	history | grep "$@" --color=always | grep -n ' '
 }
 
+function termux-get {
+	ssh redmi termux-clipboard-get
+}
+function termux-set {
+	ssh redmi termux-clipboard-set "$@"
+}
+
 function printargs {
 	echo "Total args: $#"
 	i=1
