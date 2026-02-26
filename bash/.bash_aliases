@@ -38,11 +38,19 @@ function hist {
 	history | grep "$@" --color=always | grep -n ' '
 }
 
-function termux-get {
-	ssh redmi termux-clipboard-get
-}
 function termux-set {
 	ssh redmi termux-clipboard-set "$@"
+}
+function termux-get {
+	local clipboard=$(ssh redmi termux-clipboard-get)
+	# if Termux cannot access clipboard while running in bg,
+	# retry by opening a temporary floating window
+	if [ -z "$clipboard" ]; then
+		ssh redmi am startservice com.termux.window/.TermuxFloatService &> /dev/null
+		clipboard=$(ssh redmi termux-clipboard-get)
+		(ssh redmi am stopservice com.termux.window/.TermuxFloatService &> /dev/null &)
+	fi
+	echo "$clipboard"
 }
 
 function printargs {
