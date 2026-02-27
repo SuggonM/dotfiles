@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+
+path=$(echo "$NAUTILUS_SCRIPT_SELECTED_URIS" | \
+	sed -E -e 's/%20/ /g' -e 's/(admin|file):\/\///')
+
+wl-copy "$path"
