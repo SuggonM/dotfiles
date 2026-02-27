@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+path=$(echo "$NAUTILUS_SCRIPT_SELECTED_URIS" | \
+	sed -e '1!d' -e 's/%20/ /g' -e 's|admin://||')
+
+$HOME/.local/share/flatpak/exports/bin/app.devsuite.Ptyxis --tab -- \
+	sudo su -c "cd '$path' 2> /dev/null || cd '$(dirname "$path")'; exec bash"

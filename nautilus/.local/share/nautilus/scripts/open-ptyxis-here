@@ -1,0 +1,2 @@
+#!/usr/bin/env sh
+$HOME/.local/share/flatpak/exports/bin/app.devsuite.Ptyxis --tab
