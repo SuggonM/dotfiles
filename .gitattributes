@@ -1,4 +1,4 @@
-extensions.conf  linguist-language=Git-Config
+.dconf           linguist-language=Git-Config
 fstab            linguist-language=Shell
 os-release       linguist-language=Shell
 updatedb.conf    linguist-language=Shell
