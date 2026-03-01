@@ -8,6 +8,7 @@ flatpaks=(
 	com.github.tchx84.Flatseal
 	com.spotify.Client
 	com.usebottles.bottles
+	io.github.ungoogled_software.ungoogled_chromium
 	org.gimp.GIMP
 	org.gnome.World.Iotas
 )

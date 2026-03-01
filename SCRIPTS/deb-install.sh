@@ -12,13 +12,6 @@ function vencord {
 	sh -c "$(curl -sS https://raw.githubusercontent.com/Vendicated/VencordInstaller/main/install.sh | eval "$inject")"
 }
 
-# https://www.google.com/chrome/next-steps.html
-function chrome {
-	local url="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
-	wget -q --show-progress -O /tmp/chrome.deb "$url"
-	sudo apt-get install /tmp/chrome.deb
-}
-
 # https://obsidian.md/download
 function obsidian {
 	local url="https://api.github.com/repos/obsidianmd/obsidian-releases/releases/latest"
