@@ -10,7 +10,6 @@ flatpaks=(
 	com.usebottles.bottles
 	org.gimp.GIMP
 	org.gnome.World.Iotas
-	org.mozilla.firefox
 )
 
 selected=(

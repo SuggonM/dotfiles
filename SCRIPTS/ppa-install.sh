@@ -2,6 +2,7 @@
 set -e
 
 sudo add-apt-repository -y ppa:lakinduakash/lwh
+sudo add-apt-repository -y ppa:mozillateam/ppa
 sudo add-apt-repository -y ppa:obsproject/obs-studio
 
 # https://blog.javinator9889.com/discord-ppa-keep-it-up-to-date-on-linux-easily/
@@ -12,10 +13,11 @@ sudo tee /etc/apt/sources.list.d/javinator9889-ppa.list <<< "deb [arch=amd64 sig
 curl -s https://packagecloud.io/install/repositories/filips/FirefoxPWA/script.deb.sh?any=true | sudo bash
 
 pkgs=(
+	discord
+	firefox
+	firefoxpwa
 	linux-wifi-hotspot
 	obs-studio
-	discord
-	firefoxpwa
 )
 
 sudo apt-get update
