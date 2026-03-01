@@ -2,7 +2,6 @@
 set -e
 
 flatpaks=(
-	app.devsuite.Ptyxis
 	app.zen_browser.zen
 	com.github.dynobo.normcap
 	com.github.tchx84.Flatseal
