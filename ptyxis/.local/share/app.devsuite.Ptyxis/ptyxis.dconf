@@ -2,7 +2,7 @@
 # import command: dconf load /org/gnome/Ptyxis/ < ptyxis.dconf
 
 [/]
-profile-uuids=['6bb0240fb91aa96daa8e05c0689f6373']
+profile-uuids=['6bb0240fb91aa96daa8e05c0689f6373', '0ff46c301e5ad3ef3e9bf7ae69a44911']
 default-profile-uuid='6bb0240fb91aa96daa8e05c0689f6373'
 use-system-font=false
 font-name='ComicMonoNF 15'
@@ -18,3 +18,9 @@ zoom-in='<Control>equal'
 label='Default'
 palette='101-google'
 custom-links=[('(?!\\/\\/)([\\w\\/\\-.~]+\\/[\\w\\/\\-.]+)+', 'file://$1')]
+
+[Profiles/0ff46c301e5ad3ef3e9bf7ae69a44911]
+label='Arch-chroot'
+palette='Tokyo Night'
+use-custom-command=true
+custom-command='sudo arch-chroot /mnt/arch su - suggon'
