@@ -1,18 +1,20 @@
-[org/gnome/Ptyxis]
+# update command: dconf dump /org/gnome/Ptyxis/ > ptyxis.dconf
+# import command: dconf load /org/gnome/Ptyxis/ < ptyxis.dconf
+
+[/]
 profile-uuids=['6bb0240fb91aa96daa8e05c0689f6373']
 default-profile-uuid='6bb0240fb91aa96daa8e05c0689f6373'
-window-size=(132, 33)
 use-system-font=false
 font-name='ComicMonoNF 15'
 
-[org/gnome/Ptyxis/Shortcuts]
+[Shortcuts]
 copy-clipboard='<Control>c'
 paste-clipboard='<Control>v'
 move-previous-tab='<Shift><Control>Tab'
 move-next-tab='<Control>Tab'
 zoom-in='<Control>equal'
 
-[org/gnome/Ptyxis/Profiles/6bb0240fb91aa96daa8e05c0689f6373]
+[Profiles/6bb0240fb91aa96daa8e05c0689f6373]
 label='Default'
 palette='101-google'
 custom-links=[('(?!\\/\\/)([\\w\\/\\-.~]+\\/[\\w\\/\\-.]+)+', 'file://$1')]
