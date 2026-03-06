@@ -19,6 +19,13 @@ function neovim {
 	sudo install /tmp/nvim.appimage /usr/bin/nvim
 }
 
+# https://yazi-rs.github.io/docs/installation#debian
+function yazi {
+	local url="https://api.github.com/repos/sxyazi/yazi/releases/latest"
+	wget -q --show-progress -O /tmp/yazi.deb $(curl -sS "$url" | grep -o 'https://.*x86_64-unknown-linux-gnu.deb')
+	sudo apt-get install /tmp/yazi.deb
+}
+
 # https://obsidian.md/download
 function obsidian {
 	local url="https://api.github.com/repos/obsidianmd/obsidian-releases/releases/latest"
