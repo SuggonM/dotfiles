@@ -30,7 +30,7 @@ function wl-extend {
 	export WAYLAND_DISPLAY=wayland-0
 	export XDG_RUNTIME_DIR=/run/user/1000
 	echo Run in host shell:
-	echo sudo mount --bind /run/user/1000/ /mnt/$(cat /etc/hostname)/run/user/1000/
+	echo sudo mount --bind --mkdir /run/user/1000/ /mnt/$(cat /etc/hostname)/run/user/1000/
 }
 
 # grep a pattern in bash history
