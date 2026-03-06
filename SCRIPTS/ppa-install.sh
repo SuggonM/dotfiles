@@ -12,12 +12,16 @@ sudo tee /etc/apt/sources.list.d/javinator9889-ppa.list <<< "deb [arch=amd64 sig
 # https://packagecloud.io/filips/FirefoxPWA
 curl -s https://packagecloud.io/install/repositories/filips/FirefoxPWA/script.deb.sh?any=true | sudo bash
 
+# https://docs.waydro.id/usage/install-on-desktops#ubuntu-debian-and-derivatives
+curl -s https://repo.waydro.id | sudo bash
+
 pkgs=(
 	discord
 	firefox
 	firefoxpwa
 	linux-wifi-hotspot
 	obs-studio
+	waydroid
 )
 
 sudo apt-get update
