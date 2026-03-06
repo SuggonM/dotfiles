@@ -47,13 +47,6 @@ function terabox {
 	sudo apt-get install /tmp/terabox.deb
 }
 
-# https://software.opensuse.org/download.html?project=home:archcrack&package=clifm
-function clifm {
-	local url="https://software.opensuse.org/download/package.json?project=home:archcrack&package=clifm"
-	wget -q --show-progress -O /tmp/clifm.deb $(curl -sS "$url" | jq | grep -o "https://.*.xUbuntu_.*.deb" | fzf)
-	sudo apt-get install /tmp/clifm.deb
-}
-
 # list all functions and run the one selected by user
 apps=$(cat $0 | grep '^function .* {' | awk '{print $2}')
 selected=$(echo "$apps" | fzf)

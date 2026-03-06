@@ -18,6 +18,7 @@ pkgs=(
 	bindfs  # bind-mount with altered ownership
 	build-essential  # compile software from source
 	catimg
+	clifm
 	cmake
 	dconf-editor
 	default-jdk  # java JDK
@@ -68,7 +69,7 @@ pkgs=(
 	sl
 	speedtest-cli
 	stow
-	tldr
+	tldr-py
 	tmux
 	traceroute
 	translate-shell
