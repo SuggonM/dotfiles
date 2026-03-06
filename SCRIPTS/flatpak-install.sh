@@ -19,4 +19,5 @@ selected=(
 echo "Selected:"
 printf '%s\n' "${selected[@]}" | column
 
-echo flatpak --user install "${selected[@]}"
+flatpak --user remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak --user install "${selected[@]}"
