@@ -10,6 +10,7 @@ pkgs=(
 	adb
 	aha  # convert terminal output into html
 	anacron
+	ani-cli
 	aptitude
 	arch-install-scripts  # arch-chroot is too convenient
 	atool  # archive listing integration with `lf`
@@ -72,6 +73,7 @@ pkgs=(
 	traceroute
 	translate-shell
 	tree
+	vlc
 	wl-clipboard
 	woff2
 	x11-apps  # detect Xwayland with xeyes
