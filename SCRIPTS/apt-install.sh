@@ -14,7 +14,7 @@ pkgs=(
 	aptitude
 	arch-install-scripts  # arch-chroot is too convenient
 	atool  # archive listing integration with `lf`
-	batcat
+	bat
 	bindfs  # bind-mount with altered ownership
 	build-essential  # compile software from source
 	catimg
