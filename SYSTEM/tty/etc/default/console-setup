@@ -1,3 +1,9 @@
+# init command:
+# sudo dpkg-reconfigure console-setup
+
+# OR for current session only:
+# sudo setupcon
+
 # CONFIGURATION FILE FOR SETUPCON
 
 # Consult the console-setup(5) manual page.
@@ -6,9 +12,9 @@ ACTIVE_CONSOLES="/dev/tty[1-6]"
 
 CHARMAP="UTF-8"
 
-CODESET="guess"
-FONTFACE="Fixed"
-FONTSIZE="8x16"
+CODESET="Lat15"
+FONTFACE="TerminusBold"
+FONTSIZE="12x24"
 
 VIDEOMODE=
 
