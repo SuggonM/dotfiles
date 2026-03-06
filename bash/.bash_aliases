@@ -38,6 +38,11 @@ function hist {
 	history | grep "$@" --color=always | grep -n ' '
 }
 
+# highlight command's --help text with bat
+function help {
+	"$@" --help | bat --plain --color=always -l help
+}
+
 function termux-set {
 	ssh redmi termux-clipboard-set "$@"
 }
