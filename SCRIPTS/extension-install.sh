@@ -28,4 +28,13 @@ exts=(
 )
 
 pipx install gnome-extensions-cli --system-site-packages
+
+if ! command -v gext > /dev/null; then
+	source $HOME/.profile
+fi
+
 gext --dbus install "${exts[@]}"
+
+if zenity --question --text="Import extension configs too?"; then
+	dconf load /org/gnome/shell/extensions/ < "$(dirname $0)/extensions.dconf"
+fi
