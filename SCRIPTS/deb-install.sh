@@ -12,6 +12,13 @@ function vencord {
 	sh -c "$(curl -sS https://raw.githubusercontent.com/Vendicated/VencordInstaller/main/install.sh | eval "$inject")"
 }
 
+# https://neovim.io/doc/install/#appimage-universal-linux-package
+function neovim {
+	local url="https://api.github.com/repos/neovim/neovim/releases/latest"
+	wget -q --show-progress -O /tmp/nvim.appimage $(curl -sS "$url" | grep -o 'https://.*nvim-linux-x86_64.appimage' | head -n1)
+	sudo install /tmp/nvim.appimage /usr/bin/nvim
+}
+
 # https://obsidian.md/download
 function obsidian {
 	local url="https://api.github.com/repos/obsidianmd/obsidian-releases/releases/latest"
