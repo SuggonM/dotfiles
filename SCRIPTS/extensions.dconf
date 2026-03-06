@@ -58,6 +58,10 @@ search-provider-recent-files=true
 show-activities-button=false
 update-notifier-project-version=70
 
+[bluetooth-battery-monitor]
+always-show-percentage=true
+hide-original-bluetooth-icon=true
+
 [clipboard-indicator]
 cache-images=true
 cache-only-favorites=false

@@ -5,6 +5,7 @@ exts=(
 	"allowlockedremotedesktop@kamens.us"
 	"appindicatorsupport@rgcjonas.gmail.com"
 	"arcmenu@arcmenu.com"
+	"bluetooth-battery-monitor@v8v88v8v88.com"
 	"clipboard-indicator@tudmotu.com"
 	"color-picker@tuberry"
 	"compiz-windows-effect@hermes83.github.com"
