@@ -1,5 +1,4 @@
 #!/usr/bin/env sh
-
 set -e
 
 theme_url="https://github.com/AdisonCavani/distro-grub-themes/raw/master/themes/ubuntu.tar"

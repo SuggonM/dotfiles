@@ -84,7 +84,7 @@ pkgs=(
 )
 
 selected=(
-	$(printf '%s\n' "${pkgs[@]}" | fzf --multi --bind ctrl-a:select-all)
+	$(printf '%s\n' "${pkgs[@]}" | fzf --multi --cycle --bind ctrl-a:select-all)
 )
 
 echo "Selected:"
