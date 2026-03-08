@@ -69,6 +69,7 @@ pkgs=(
 	sl
 	speedtest-cli
 	stow
+	systemd-zram-generator
 	tldr-py
 	tmux
 	traceroute
