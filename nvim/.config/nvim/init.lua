@@ -37,3 +37,13 @@ vim.api.nvim_create_autocmd('FileType', {
 		vim.o.formatoptions = vim.o.formatoptions:gsub('[ro]', '')
 	end
 })
+
+-- enable cmdline autocomplete (:, /, ?)
+vim.o.wildmode = 'noselect:lastused,full'
+vim.o.wildoptions = 'pum'
+vim.api.nvim_create_autocmd('CmdlineChanged', {
+	pattern = { ':', '/', '?' },
+	callback = function()
+		vim.fn.wildtrigger()
+	end
+})
