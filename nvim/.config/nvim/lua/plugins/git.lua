@@ -1,9 +1,13 @@
 ---@type LazySpec
 return {
 	'lewis6991/gitsigns.nvim',
+	dependencies = {
+		'kdheepak/lazygit.nvim'
+	},
 
 	lazy = false,
 	keys = {
+		{ '<leader>gg', ':LazyGit<cr>' },
 		{ '<leader>ga', ':Gitsigns stage_buffer<cr>' },
 		{ '<leader>gh', ':Gitsigns stage_hunk<cr>', mode = { 'n', 'x' }},
 		{ '<leader>gp', ':Gitsigns preview_hunk<cr>' },

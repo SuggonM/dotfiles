@@ -6,8 +6,9 @@ return {
 		ensure_installed = { 'lua_ls', 'cssls', 'ts_ls' }
 	},
 	dependencies = {
+		'neovim/nvim-lspconfig',
 		{ 'mason-org/mason.nvim', opts = {} },
-		'neovim/nvim-lspconfig'
+		{ 'ray-x/lsp_signature.nvim', opts = { hint_enable = false } }
 	},
 	setup = {
 		vim.api.nvim_create_autocmd('LspAttach', {
@@ -25,6 +26,8 @@ return {
 						}
 					}
 				})
+				vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
+				vim.api.nvim_set_hl(0, 'LspSignatureActiveParameter', { bg = '#525252' })
 			end
 		})
 	}
