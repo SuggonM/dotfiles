@@ -3,7 +3,13 @@ require('config.lazy')
 vim.o.number = true  -- line numbers
 vim.o.relativenumber = true
 vim.o.list = true  -- render whitespace chars
-vim.o.listchars = 'tab:→ ,nbsp:␣,trail:·,precedes:«,extends:»'
+vim.opt.listchars = {
+	tab = '→ ',
+	nbsp = '␣',
+	lead = '•', trail = '•', multispace = '•',
+	precedes = '«',
+	extends = '»'
+}
 vim.o.fillchars = 'eob: '  -- disable '~'
 vim.o.tabstop = 4
 vim.o.shiftwidth = 4
@@ -17,6 +23,10 @@ vim.o.undofile = true
 vim.o.backup = true
 vim.o.writebackup = true
 vim.o.backupdir = vim.fn.stdpath('state') .. '/backup/'
+vim.o.spell = true
+vim.o.spelllang = 'en_us'
+vim.o.scrolloff = 2
+vim.o.splitright = true
 vim.o.cursorline = true
 vim.api.nvim_set_hl(0, 'CursorLine', { bg = '#1f1f1f' })
 vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = '#ffffff' })
