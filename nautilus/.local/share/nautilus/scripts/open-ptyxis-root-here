@@ -3,5 +3,5 @@
 path=$(echo "$NAUTILUS_SCRIPT_SELECTED_URIS" | \
 	sed -E -e '1!d' -e 's/%20/ /g' -e 's/(admin|file):\/\///')
 
-$HOME/.local/share/flatpak/exports/bin/app.devsuite.Ptyxis --tab -- \
-	sudo su -c "[-d '$path'] && cd '$path' || cd '$(dirname "$path")'; exec bash"
+ptyxis --tab -- sudo su -c \
+	"[ -d '$path' ] && cd '$path' || cd '$(dirname "$path")'; exec bash"
