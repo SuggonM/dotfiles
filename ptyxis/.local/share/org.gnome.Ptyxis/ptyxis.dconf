@@ -17,7 +17,7 @@ zoom-in='<Control>equal'
 [Profiles/6bb0240fb91aa96daa8e05c0689f6373]
 label='Default'
 palette='101-google'
-custom-links=[('(?!\\/\\/)([\\w\\/\\-.~]+\\/[\\w\\/\\-.]+)+', 'file://$1')]
+custom-links=[('(?!\\/\\/)([\\w\\/\\-.~]+\\/[\\w\\/\\-.]+)+', 'file://$1'), ('\\[(SC\\d+)\\]', 'https://www.shellcheck.net/wiki/$1')]
 
 [Profiles/0ff46c301e5ad3ef3e9bf7ae69a44911]
 label='Arch-chroot'
