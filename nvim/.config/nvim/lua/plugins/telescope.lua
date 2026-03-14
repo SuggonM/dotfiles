@@ -2,10 +2,7 @@
 return {
 	'nvim-telescope/telescope.nvim',
 	version = '*',
-	dependencies = {
-		'nvim-lua/plenary.nvim',
-		'nvim-telescope/telescope-ui-select.nvim'
-	},
+	dependencies = { 'nvim-lua/plenary.nvim' },
 
 	keys = {
 		{ '<C-p>',      ':Telescope find_files<cr>' },
@@ -21,15 +18,11 @@ return {
 				-- https://www.reddit.com/r/neovim/comments/nspg8o/comment/h0owlue/
 				find_command = { 'rg', '--files', '--iglob', '!.git', '--hidden' }
 			}
-		},
-		extensions = {
-			['ui-select'] = require('telescope.themes').get_dropdown()
 		}
 	},
 
 	config = function(_, opts)
 		require('telescope').setup(opts)
-		require('telescope').load_extension('ui-select')
 
 		-- quick access nvim configs from any location
 		vim.keymap.set('n', '<leader>nv', function()
