@@ -3,7 +3,9 @@ return {
 	'm4xshen/autoclose.nvim',
 	dependencies = {
 		'windwp/nvim-ts-autotag',
-		opts = {}
+		opts = {
+			aliases = { mediawiki = 'html' }
+		}
 	},
 
 	opts = {
