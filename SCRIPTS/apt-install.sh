@@ -75,6 +75,7 @@ pkgs=(
 	traceroute
 	translate-shell
 	tree
+	tree-sitter-cli
 	vlc
 	wl-clipboard
 	woff2
