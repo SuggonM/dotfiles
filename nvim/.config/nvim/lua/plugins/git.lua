@@ -6,16 +6,23 @@ return {
 	},
 
 	lazy = false,
-	keys = {
-		{ '<leader>gg', ':LazyGit<cr>' },
-		{ '<leader>ga', ':Gitsigns stage_buffer<cr>' },
-		{ '<leader>gh', ':Gitsigns stage_hunk<cr>', mode = { 'n', 'x' }},
-		{ '<leader>gp', ':Gitsigns preview_hunk<cr>' },
-		{ '<leader>gv', ':Gitsigns select_hunk<cr>' },
-		{ '<leader>gr', ':Gitsigns reset_hunk<cr>' },
-		{ '[g', ':Gitsigns nav_hunk prev<cr>' },
-		{ ']g', ':Gitsigns nav_hunk next<cr>' }
-	},
+	keys = function()
+		local gitsigns = require('gitsigns')
+		local lazygit = require('lazygit')
+		return {
+			{ '<leader>gg', lazygit.lazygit },
+			{ '<leader>ga', gitsigns.stage_buffer },
+			{ '<leader>gh', gitsigns.stage_hunk },
+			{ '<leader>gp', gitsigns.preview_hunk },
+			{ '<leader>gv', gitsigns.select_hunk },
+			{ '<leader>gr', gitsigns.reset_hunk },
+			{ '[g', function() gitsigns.nav_hunk('prev') end },
+			{ ']g', function() gitsigns.nav_hunk('next') end },
+
+			-- behaves differently, cannot replicate with lua function
+			{ '<leader>gh', ':Gitsigns stage_hunk<cr>', mode = { 'x' } }
+		}
+	end,
 
 	opts = {
 		signs = {

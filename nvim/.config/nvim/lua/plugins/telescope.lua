@@ -4,13 +4,21 @@ return {
 	version = '*',
 	dependencies = { 'nvim-lua/plenary.nvim' },
 
-	keys = {
-		{ '<C-p>',      ':Telescope find_files<cr>' },
-		{ '<leader>ff', ':Telescope find_files<cr>' },
-		{ '<leader>fg', ':Telescope live_grep<cr>' },
-		{ '<leader>fh', ':Telescope help_tags<cr>' },
-		{ '<leader>fb', ':Telescope buffers<cr>' },
-	},
+	keys = function()
+		local telescope = require('telescope.builtin')
+		return {
+			{ '<C-p>',      telescope.find_files },
+			{ '<leader>ff', telescope.find_files },
+			{ '<leader>fg', telescope.live_grep },
+			{ '<leader>fh', telescope.help_tags },
+			{ '<leader>fb', telescope.buffers },
+
+			-- quick access nvim configs from any location
+			{ '<leader>nv', function()
+				telescope.find_files({ cwd = vim.fn.stdpath('config') })
+			end }
+		}
+	end,
 
 	opts = {
 		pickers = {
@@ -19,14 +27,5 @@ return {
 				find_command = { 'rg', '--files', '--iglob', '!.git', '--hidden' }
 			}
 		}
-	},
-
-	config = function(_, opts)
-		require('telescope').setup(opts)
-
-		-- quick access nvim configs from any location
-		vim.keymap.set('n', '<leader>nv', function()
-			require('telescope.builtin').find_files({ cwd = vim.fn.stdpath('config') })
-		end)
-	end
+	}
 }
