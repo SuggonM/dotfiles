@@ -14,7 +14,8 @@ return {
 				style_preset = { 3, 4 },
 				separator_style = 'slope',
 				always_show_bufferline = false,
-				show_buffer_close_icons = false
+				show_buffer_close_icons = false,
+				right_mouse_command = false
 			},
 			highlights = {
 				fill = { bg = background },
