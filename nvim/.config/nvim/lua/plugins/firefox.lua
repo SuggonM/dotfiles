@@ -23,8 +23,9 @@ return {
 		if vim.g.started_by_firenvim == true then
 			vim.api.nvim_create_autocmd('BufReadPost', {
 				callback = function()
-					require('lualine').hide()
+					require('smear_cursor').toggle()
 					vim.keymap.set('n', '<Esc><Esc>', vim.fn['firenvim#focus_page'])
+					vim.o.laststatus = 0
 					vim.o.autochdir = true
 					vim.o.guifont = 'Monaco:h15'
 					-- hack to run ftplugins and get snippets from both languages

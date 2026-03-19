@@ -5,8 +5,8 @@ return {
 	opts = {
 		parsers = { css = true },
 		display = {
-			mode = "virtualtext",
-			virtualtext = { position = "before" },
+			mode = 'virtualtext',
+			virtualtext = { position = 'before' }
 		}
 	}
 }
