@@ -14,8 +14,9 @@ return {
 			pair_spaces = true
 		},
 		keys = {
-			["'"] = { disable_command_mode = true },
-			['"'] = { disable_command_mode = true }
+			['>'] = { escape = false, close = false, pair = '><' },
+			["'"] = { escape = true, close = true, pair = "''", disable_command_mode = true },
+			['"'] = { escape = true, close = true, pair = '""', disable_command_mode = true }
 		}
 	}
 }
