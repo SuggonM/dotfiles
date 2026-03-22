@@ -19,7 +19,7 @@ return {
 				end)
 				vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
 				vim.api.nvim_set_hl(0, 'LspSignatureActiveParameter', { bg = '#525252' })
-				vim.lsp.document_color.enable(true, 0, { style = 'virtual' })
+				vim.lsp.document_color.enable(true, nil, { style = 'virtual' })
 				vim.diagnostic.config({
 					virtual_text = true,
 					signs = {
