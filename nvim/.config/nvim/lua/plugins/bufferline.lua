@@ -21,6 +21,7 @@ return {
 		style = 'slant',
 		stab_right = '',
 		stab_start = '  ',
+		stab_end = function() return vim.fn.expand('%:~:.:h:s/^.$//') end,
 		font_active = 'none'
 	}
 }
