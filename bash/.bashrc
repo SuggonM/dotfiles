@@ -5,15 +5,14 @@
 BLESH="$HOME/.local/share/blesh/ble.sh"
 [[ -f $BLESH ]] && source -- "$BLESH" --attach=none
 
-source "$HOME/.bashrc_default"
+[[ -f "$HOME/.bashrc_default" ]] && source "$HOME/.bashrc_default"
 
 shopt -s globstar
 shopt -s autocd
-eval $(lesspipe)
+command -v lesspipe > /dev/null && eval $(lesspipe)
 
 if [[ -n $SSH_CONNECTION ]]; then
-	# fastfetch --logo none
-	neofetch --backend off
+	fastfetch --logo none
 fi
 
 function set_dollar {
@@ -53,4 +52,4 @@ export NVM_DIR="$HOME/.nvm"
 export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"
 
-. "$HOME/.deno/env"
+[ -f "$HOME/.deno/env" ] && . "$HOME/.deno/env"

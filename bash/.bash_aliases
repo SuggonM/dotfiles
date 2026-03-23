@@ -43,6 +43,11 @@ function help {
 	"$@" --help | bat --plain --color=always -l help
 }
 
+# start a process (preferably GUI application) and detach it
+function start {
+	"$@" &> /dev/null & disown
+}
+
 function termux-set {
 	ssh redmi termux-clipboard-set "$@"
 }
