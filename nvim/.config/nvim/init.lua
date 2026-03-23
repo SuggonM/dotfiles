@@ -30,6 +30,7 @@ vim.o.splitright = true
 vim.o.cursorline = true
 vim.api.nvim_set_hl(0, 'CursorLine', { bg = '#1f1f1f' })
 vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = '#ffffff' })
+vim.keymap.set('i', 'kj', '<Escape>')
 
 -- auto insert mode in :term
 vim.api.nvim_create_autocmd('TermOpen', {
