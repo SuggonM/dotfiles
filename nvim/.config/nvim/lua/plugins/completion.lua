@@ -50,5 +50,13 @@ return {
 				{ name = 'buffer' }
 			})
 		})
+
+		-- markdownify luasnip's hover docs
+		vim.api.nvim_create_autocmd('FileType', {
+			pattern = 'cmp_docs',
+			callback = function()
+				vim.treesitter.start(0, 'markdown')
+			end
+		})
 	end
 }
