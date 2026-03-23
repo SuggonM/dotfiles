@@ -8,7 +8,8 @@ return {
 	dependencies = {
 		'neovim/nvim-lspconfig',
 		{ 'mason-org/mason.nvim', opts = {} },
-		{ 'ray-x/lsp_signature.nvim', opts = { hint_enable = false } }
+		{ 'ray-x/lsp_signature.nvim', opts = { hint_enable = false } },
+		{ 'j-hui/fidget.nvim', opts = {} }
 	},
 	setup = {
 		vim.api.nvim_create_autocmd('LspAttach', {
@@ -17,9 +18,11 @@ return {
 				vim.keymap.set('n', 'grh', function()
 					vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
 				end)
+				vim.lsp.document_color.enable(true, nil, { style = 'virtual' })
+
 				vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
 				vim.api.nvim_set_hl(0, 'LspSignatureActiveParameter', { bg = '#525252' })
-				vim.lsp.document_color.enable(true, nil, { style = 'virtual' })
+
 				vim.diagnostic.config({
 					virtual_text = true,
 					signs = {

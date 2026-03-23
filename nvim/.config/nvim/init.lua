@@ -44,11 +44,11 @@ vim.api.nvim_create_autocmd('TermOpen', {
 vim.api.nvim_create_autocmd('FileType', {
 	pattern = '*',
 	callback = function()
-		vim.o.formatoptions = vim.o.formatoptions:gsub('[ro]', '')
+		vim.opt.formatoptions:remove({ 'r', 'o' })
 	end
 })
 
--- enable cmdline autocomplete (:, /, ?)
+-- enable cmdline auto-suggest (:, /, ?)
 vim.o.wildmode = 'noselect:lastused,full'
 vim.o.wildoptions = 'pum'
 vim.api.nvim_create_autocmd('CmdlineChanged', {
