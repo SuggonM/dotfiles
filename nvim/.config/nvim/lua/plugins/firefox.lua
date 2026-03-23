@@ -39,7 +39,7 @@ return {
 						'FocusLost'
 					}, {
 						nested = true,
-						command = 'silent write'
+						command = 'silent update'
 					})
 				end
 			})
