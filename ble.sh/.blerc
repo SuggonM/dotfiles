@@ -1,6 +1,14 @@
 # config for ble.sh (bash extension with nice features)
 # https://github.com/akinomyoga/ble.sh
 
+# source /etc/profile.d/bash_completion.sh
+source /usr/share/bash-completion/completions/fzf
+
+ble-import -d integration/fzf-completion
+ble-import -d integration/fzf-key-bindings
+
+export FZF_CTRL_R_OPTS="--exact --preview 'echo {}' --preview-window down:3:hidden:wrap --bind '?:toggle-preview'"
+
 function vim-load-hooks-custom {
 	ble-import vim-surround
 	bleopt keymap_vi_imap_undo='more'
