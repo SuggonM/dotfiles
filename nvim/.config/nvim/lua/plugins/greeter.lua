@@ -14,5 +14,7 @@ return {
 		}
 		theme.config.layout[2].opts.hl = 'Normal'
 		require('alpha').setup(theme.config)
+
+		vim.keymap.set('n', '<leader>a', require('alpha').start)
 	end
 }
