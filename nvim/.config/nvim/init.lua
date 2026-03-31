@@ -1,4 +1,5 @@
 require('config.lazy')
+vim.cmd.packadd('nvim.undotree')
 
 vim.o.number = true  -- line numbers
 vim.o.relativenumber = true
@@ -27,10 +28,17 @@ vim.o.spell = true
 vim.o.spelllang = 'en_us'
 vim.o.scrolloff = 2
 vim.o.splitright = true
+vim.o.pumblend = 15
+vim.o.cmdheight = 0
 vim.o.cursorline = true
 vim.api.nvim_set_hl(0, 'CursorLine', { bg = '#1f1f1f' })
 vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = '#ffffff' })
 vim.keymap.set('i', 'kj', '<Escape>')
+
+require('vim._core.ui2').enable({
+	enabled = true,
+	msg = { targets = 'msg' }
+})
 
 -- auto insert mode in :term
 vim.api.nvim_create_autocmd('TermOpen', {
