@@ -13,6 +13,7 @@ paste-clipboard='<Control>v'
 move-previous-tab='<Shift><Control>Tab'
 move-next-tab='<Control>Tab'
 zoom-in='<Control>equal'
+close-window=''
 
 [Profiles/6bb0240fb91aa96daa8e05c0689f6373]
 label='Default'
