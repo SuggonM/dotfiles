@@ -27,6 +27,7 @@ waydroid prop set persist.waydroid.multi_windows true
 sudo sed -i'~' -E 's/=.\$\(command -v (nft|ip6?tables-legacy).*/=/g' \
 	/usr/lib/waydroid/data/scripts/waydroid-net.sh
 
-# download F-Droid and add microG
+# download F-Droid and add microG + IzzyOnDroid repos
 # https://f-droid.org/F-Droid.apk
-# https://microg.org/fdroid/repo/?fingerprint=9BD06727E62796C0130EB6DAB39B73157451582CBD138E86C468ACC395D14165
+# https://repo.microg.org/fdroid/repo
+# https://apt.izzysoft.de/fdroid/repo
