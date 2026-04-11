@@ -45,3 +45,5 @@ cd SYSTEM/
 sudo stow -t / $package
 ```
 
+## License
+This project is licensed under GLWTPL. Or more specifically, [GLWTSPL](https://github.com/me-shaon/GLWTPL/blob/master/NSFW_LICENSE)
