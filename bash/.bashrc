@@ -29,14 +29,19 @@ function set_newline {
 function set_linebreak {
 	LINEBREAK=${LINEBREAK-"\n"}
 }
+function set_subshell {
+	SUBSHELL=${SHLVL/1/}
+	SUBSHELL=${SUBSHELL:+(${SHLVL}) }
+}
 
 prompt() {
 	status=$?
 	set_dollar
 	set_newline
 	set_linebreak
+	set_subshell
 	history -a
-	PS1="${NEWLINE}\[\033[01;32m\][\#]\[\033[00m\]: \[\033[01;34m\]../\W/ ${LINEBREAK}${DOLLAR}\[\033[00m\] ${VIRTUAL_ENV_PROMPT}"
+	PS1="${NEWLINE}${SUBSHELL}\[\033[01;32m\][\#]\[\033[00m\]: \[\033[01;34m\]../\W/\[\033[00m\] ${VIRTUAL_ENV_PROMPT}${LINEBREAK}${DOLLAR}\[\033[00m\] "
 }
 PROMPT_COMMAND="prompt"
 

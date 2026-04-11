@@ -15,6 +15,7 @@ alias wupdatedb="updatedb --database-root /media/suggon/c -o /var/lib/plocate/pl
 alias sudo="sudo " # https://askubuntu.com/a/22043/1873035
 alias archroot="sudo arch-chroot /mnt/arch su - suggon"
 alias cp="cp --preserve=timestamps"
+alias scp="scp -p"
 
 # when using adb pull, auto add -a (preserve timestamp) flag
 function adb {
@@ -71,5 +72,4 @@ function printargs {
 		((i++))
 	done
 }
-# make it available inside subshells
-export -f printargs
+export -f printargs  # make it available inside subshells
