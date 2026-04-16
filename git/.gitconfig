@@ -8,6 +8,7 @@
 	pager = delta
 [alias]
 	l = !lazygit
+	clean-ignored = clean -fdX
 	tree = log --all --graph --pretty=format:'%C(auto)%h – %s  %d %C(bold green)(%ar) %C(cyan)<%aN>%Creset'
 [commit]
 	gpgsign = true
