@@ -46,7 +46,7 @@ function help {
 
 # start a process (preferably GUI application) and detach it
 function start {
-	"$@" &> /dev/null & disown
+	"$@" &> /dev/null & disown %-
 }
 
 function termux-set {
