@@ -19,7 +19,7 @@ paru -S --needed --noconfirm waydroid-image waydroid-script-git bindfs
 sudo waydroid-extras install libhoudini
 sudo waydroid-extras install magisk
 sudo waydroid shell pm disable com.android.inputmethod.latin
-sudo waydroid shell cmd media_session volume --set 15
+echo cmd media_session volume --set 15 | sudo waydroid shell
 waydroid prop set persist.waydroid.multi_windows true
 
 # arch-only issue?
