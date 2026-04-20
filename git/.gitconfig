@@ -1,0 +1,21 @@
+[user]
+	name = Suggon
+	email = maharjansagun99@protonmail.com
+	signingkey = ~/.ssh/id_ed25519.pub
+[init]
+	defaultBranch = main
+[core]
+	pager = delta
+[alias]
+	l = !lazygit
+	clean-ignored = clean -fdX
+	tree = log --all --graph --pretty=format:'%C(auto)%h – %s  %d %C(bold green)(%ar) %C(cyan)<%aN>%Creset'
+[commit]
+	gpgsign = true
+[gpg]
+	format = ssh
+
+# for easier auth, always use SSH url when cloning and adding origin
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+	insteadOf = gh:
