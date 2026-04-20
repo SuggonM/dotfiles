@@ -18,3 +18,4 @@
 # for easier auth, always use SSH url when cloning and adding origin
 [url "git@github.com:"]
 	insteadOf = https://github.com/
+	insteadOf = gh:
