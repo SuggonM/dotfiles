@@ -5,11 +5,14 @@
 # that can't tolerate any output.  So make sure this doesn't display
 # anything or bad things will happen !
 
-export HOME=/sdcard
-export HOSTNAME=$(getprop ro.lineage.device)
+export HOME=/data/local/tmp
+export HOSTNAME=$(getprop ro.product.device)
 export TERM=xterm
-export TMPDIR=/data/local/tmp
 export USER=$(id -un)
+export HISTFILE=$HOME/.bash_history
+export PATH+=:$HOME/bin
+
+cd
 
 # Test for an interactive shell.  There is no need to set anything
 # past this point for scp and rcp, and it's important to refrain from
