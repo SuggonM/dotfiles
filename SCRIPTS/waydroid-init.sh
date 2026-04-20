@@ -15,19 +15,22 @@ paru -S --needed --noconfirm waydroid-image waydroid-script-git bindfs
 # sudo sed -i 's/if result.stderr:/if result.returncode != 0 and result.stderr:/' \
 # 	/opt/waydroid-script/tools/helper.py
 
-# sleep needed? waydroid_script restarts the session on each command
+sudo waydroid init
 sudo waydroid-extras install libhoudini
 sudo waydroid-extras install magisk
+
+waydroid session start & sleep 5
 sudo waydroid shell pm disable com.android.inputmethod.latin
 echo cmd media_session volume --set 15 | sudo waydroid shell
 waydroid prop set persist.waydroid.multi_windows true
 
+wget -q --show-progress -O /tmp/fdroid.apk "https://f-droid.org/F-Droid.apk"
+waydroid app install /tmp/fdroid.apk
+echo "Open F-Droid and add microG and IzzyOnDroid repos:"
+echo "https://repo.microg.org/fdroid/repo"
+echo "https://apt.izzysoft.de/fdroid/repo"
+
 # arch-only issue?
 # https://github.com/waydroid/waydroid/issues/143#issuecomment-1520857943
-sudo sed -i'~' -E 's/=.\$\(command -v (nft|ip6?tables-legacy).*/=/g' \
-	/usr/lib/waydroid/data/scripts/waydroid-net.sh
-
-# download F-Droid and add microG + IzzyOnDroid repos
-# https://f-droid.org/F-Droid.apk
-# https://repo.microg.org/fdroid/repo
-# https://apt.izzysoft.de/fdroid/repo
+# sudo sed -i'~' -E 's/=.\$\(command -v (nft|ip6?tables-legacy).*/=/g' \
+# 	/usr/lib/waydroid/data/scripts/waydroid-net.sh
