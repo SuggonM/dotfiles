@@ -49,6 +49,14 @@ function start {
 	"$@" &> /dev/null & disown %-
 }
 
+function wsh {
+	if [ $# -eq 0 ]; then
+		sudo waydroid shell bash
+	else
+		echo "$@" | sudo waydroid shell
+	fi
+}
+
 function termux-set {
 	ssh redmi termux-clipboard-set "$@"
 }
