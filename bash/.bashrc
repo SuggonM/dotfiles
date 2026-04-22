@@ -1,60 +1,44 @@
-# skip bashrc if not running interactively
-[[ $- != *i* ]] && return
+# /etc/bash/bashrc
+#
+# This file is sourced by all *interactive* bash shells on startup,
+# including some apparently interactive shells such as scp and rcp
+# that can't tolerate any output.  So make sure this doesn't display
+# anything or bad things will happen !
 
-# https://github.com/akinomyoga/ble.sh#13-set-up-bashrc
-BLESH="$HOME/.local/share/blesh/ble.sh"
-[[ -f $BLESH ]] && source -- "$BLESH" --attach=none
+export HOME=/sdcard
+export HOSTNAME=$(getprop ro.lineage.device)
+export TERM=xterm
+export TMPDIR=/data/local/tmp
+export USER=$(id -un)
 
-[[ -f "$HOME/.bashrc_default" ]] && source "$HOME/.bashrc_default"
-
-shopt -s globstar
-shopt -s autocd
-command -v lesspipe > /dev/null && eval $(lesspipe)
-
-if [[ -n $SSH_CONNECTION ]]; then
-	fastfetch --logo none
+# Test for an interactive shell.  There is no need to set anything
+# past this point for scp and rcp, and it's important to refrain from
+# outputting anything in those cases.
+if [[ $- != *i* ]] ; then
+	# Shell is non-interactive.  Be done now!
+	return
 fi
 
-function set_dollar {
-	[[ -n $(jobs -p) ]] && DOLLAR_SIGN=% || DOLLAR_SIGN=$
+# Bash won't get SIGWINCH if another process is in the foreground.
+# Enable checkwinsize so that bash will check the terminal size when
+# it regains control.  #65623
+# http://cnswww.cns.cwru.edu/~chet/bash/FAQ (E11)
+shopt -s checkwinsize
 
-	[[ $status -eq 0 ]] &&
-		DOLLAR="\[\033[01;31m\]$DOLLAR_SIGN\001\002_" ||
-		DOLLAR="\[\033[01;97m\]\[\033[01;41m\]$DOLLAR_SIGN\[\033[01;49m\]_"
-}
-function set_newline {
-	NEWLINE="$NEWLINE_"
-	NEWLINE_="\n"
-}
-function set_linebreak {
-	LINEBREAK=${LINEBREAK-"\n"}
-}
-function set_subshell {
-	SUBSHELL=${SHLVL/1/}
-	SUBSHELL=${SUBSHELL:+(${SHLVL}) }
-}
+# Enable history appending instead of overwriting.  #139609
+shopt -s histappend
 
-prompt() {
-	status=$?
-	set_dollar
-	set_newline
-	set_linebreak
-	set_subshell
-	history -a
-	PS1="${NEWLINE}${SUBSHELL}\[\033[01;32m\][\#]\[\033[00m\]: \[\033[01;34m\]../\W/\[\033[00m\] ${VIRTUAL_ENV_PROMPT}${LINEBREAK}${DOLLAR}\[\033[00m\] "
-}
-PROMPT_COMMAND="prompt"
+use_color=false
 
-[[ ! ${BLE_VERSION-} ]] || ble-attach
+# enable colorful terminal
+if [[ ${EUID} == 0 ]] ; then
+	PS1='\[\033[01;31m\]${HOSTNAME:=$(hostname)}\[\033[01;34m\] \w \$\[\033[00m\] '
+else
+	PS1='\[\033[01;32m\]${USER:=$(id \-un)}@${HOSTNAME:=$(hostname)}\[\033[01;34m\] \w \$\[\033[00m\] '
+fi
 
-############ auto added ############
+alias ll='ls -l --color=auto'
+alias ls='ls --color=auto'
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# Install Ruby Gems to ~/gems
-export GEM_HOME="$HOME/gems"
-export PATH="$HOME/gems/bin:$PATH"
-
-[ -f "$HOME/.deno/env" ] && . "$HOME/.deno/env"
+# Try to keep environment pollution down, EPA loves us.
+unset use_color safe_term match_lhs
