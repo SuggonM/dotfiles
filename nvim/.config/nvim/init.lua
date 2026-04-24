@@ -1,5 +1,6 @@
 require('config.lazy')
 vim.cmd.packadd('nvim.undotree')
+vim.cmd.packadd('nohlsearch')
 
 vim.o.number = true  -- line numbers
 vim.o.relativenumber = true
