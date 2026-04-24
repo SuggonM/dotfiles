@@ -45,5 +45,10 @@ cd SYSTEM/
 sudo stow -t / $package
 ```
 
+Checkout a different [branch](https://github.com/SuggonM/dotfiles/branches) using git worktrees (so that stowed symlinks don't die randomly):
+```bash
+git worktree add -b $branch ~/dotfiles-$branch origin/$branch
+```
+
 ## License
 This project is licensed under GLWTPL. Or more specifically, [GLWTSPL](https://github.com/me-shaon/GLWTPL/blob/master/NSFW_LICENSE)
