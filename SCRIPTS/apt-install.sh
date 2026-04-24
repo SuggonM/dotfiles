@@ -41,7 +41,6 @@ pkgs=(
 	gnome-tweaks  # change themes, mouse behavior
 	gparted
 	hexedit
-	ibus-mozc  # Japanese input
 	jq
 	kate
 	keyd  # key remap
@@ -51,9 +50,7 @@ pkgs=(
 	lua5.4
 	lynx
 	mediainfo
-	mozc-utils-gui  # Mozc dependency
 	ncdu
-	neovim
 	net-tools
 	nmap
 	openssh-server
