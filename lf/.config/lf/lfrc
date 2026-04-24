@@ -1,4 +1,5 @@
 set hidden
 set mouse
-map i $bat "$f"
+set previewer ~/.config/lf/preview.sh
+map i $bat "$f" --pager="less -+F"
 map D delete "$f"
