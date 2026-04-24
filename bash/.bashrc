@@ -1,4 +1,4 @@
-# skip bashrc if not running interactively
+# If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
 # https://github.com/akinomyoga/ble.sh#13-set-up-bashrc
@@ -9,7 +9,6 @@ BLESH="$HOME/.local/share/blesh/ble.sh"
 
 shopt -s globstar
 shopt -s autocd
-command -v lesspipe > /dev/null && eval $(lesspipe)
 
 if [[ -n $SSH_CONNECTION ]]; then
 	fastfetch --logo none
