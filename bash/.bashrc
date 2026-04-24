@@ -55,5 +55,3 @@ export NVM_DIR="$HOME/.nvm"
 # Install Ruby Gems to ~/gems
 export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"
-
-[ -f "$HOME/.deno/env" ] && . "$HOME/.deno/env"
