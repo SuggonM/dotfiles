@@ -21,7 +21,7 @@ sudo waydroid-extras install magisk
 
 waydroid session start & sleep 5
 sudo waydroid shell pm disable com.android.inputmethod.latin
-echo cmd media_session volume --set 15 | sudo waydroid shell
+sudo waydroid shell -- cmd media_session volume --set 15
 waydroid prop set persist.waydroid.multi_windows true
 
 wget -q --show-progress -O /tmp/fdroid.apk "https://f-droid.org/F-Droid.apk"
