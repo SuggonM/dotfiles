@@ -55,6 +55,7 @@ pkgs=(
 	ncdu
 	net-tools
 	nmap
+	npm
 	openssh-server
 	pipx
 	plocate
