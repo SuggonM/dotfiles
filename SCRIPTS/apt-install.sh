@@ -21,6 +21,7 @@ pkgs=(
 	catimg
 	clifm
 	cmake
+	curl
 	dconf-editor
 	default-jdk  # java JDK
 	docker.io
@@ -32,6 +33,7 @@ pkgs=(
 	fprintd  # linux fingerprint interface
 	fzf
 	gh
+	git
 	git-delta
 	gnome-boxes
 	gnome-shell-extension-manager
