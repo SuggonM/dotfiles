@@ -16,6 +16,7 @@ pkgs=(
 	atool  # archive listing integration with `lf`
 	bat
 	bindfs  # bind-mount with altered ownership
+	breeze  # kde app themes
 	build-essential  # compile software from source
 	catimg
 	clifm
@@ -37,11 +38,12 @@ pkgs=(
 	gnome-software
 	gnome-software-plugin-flatpak
 	gnome-sushi  # quick file preview from Nautilus
-	gnome-tweaks  # set dark theme on legacy GTK apps
+	gnome-tweaks  # change themes, mouse behavior
 	gparted
 	hexedit
 	ibus-mozc  # Japanese input
 	jq
+	kate
 	keyd  # key remap
 	lazygit
 	lf
@@ -62,6 +64,7 @@ pkgs=(
 	qalc
 	radare2  # disassembler
 	rar  # this is trial version btw :)
+	reptyr  # adopt a disowned/runaway process
 	ripgrep  # nvim-telescope dependency
 	ruby
 	samba

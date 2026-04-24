@@ -111,13 +111,14 @@ x-tiles=4.0
 y-tiles=4.0
 
 [custom-command-list]
-command-order=[7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 1, 2, 3, 4, 5, 6]
+command-order=[8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 1, 2, 3, 4, 5, 6, 7]
 command1=('adb connect', 'notify-send --transient "adb server" "$(adb connect redmi)"', 'phone-apple-iphone-symbolic', true)
 command2=('waydroid', '', '', true)
 command3=('*mount waydroid', '~/dotfiles/SCRIPTS/waydroid-mount.sh', '', true)
 command4=('*restart waydroid container', 'systemctl restart wayrdoid-container', '', true)
 command5=('*waydroid fullscreen', 'waydroid prop set persist.waydroid.width 1536 && waydroid prop set persist.waydroid.height 864 && waydroid session stop && waydroid show-full-ui', '', true)
 command6=('*waydroid maximize', 'waydroid prop set persist.waydroid.width "" && waydroid prop set persist.waydroid.height "" && waydroid session stop && waydroid show-full-ui', '', true)
+command7=('*start xtmapper', 'ptyxis -- cage_xtmapper.sh', '', true)
 menuicon-setting='utilities-terminal-symbolic'
 menuoptions-setting=2
 v13-migration-complete=true
@@ -247,7 +248,7 @@ startup-status=0
 support-notifier-showed-version=34
 switcher-popup-delay=true
 top-panel-position=0
-type-to-search=false
+type-to-search=true
 window-demands-attention-focus=true
 window-menu-take-screenshot-button=false
 window-picker-icon=true

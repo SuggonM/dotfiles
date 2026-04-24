@@ -3,13 +3,14 @@ set -e
 
 flatpaks=(
 	app.zen_browser.zen
+	# com.dec05eba.gpu_screen_recorder
 	com.github.dynobo.normcap
+	com.github.PintaProject.Pinta
 	com.github.tchx84.Flatseal
-	com.spotify.Client
 	com.usebottles.bottles
+	fr.handbrake.ghb
 	io.github.ungoogled_software.ungoogled_chromium
 	org.gimp.GIMP
-	org.gnome.World.Iotas
 )
 
 selected=(
