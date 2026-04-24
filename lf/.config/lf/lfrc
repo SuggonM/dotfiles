@@ -1,5 +1,5 @@
 set hidden
 set mouse
 set previewer ctpv
-map i $bat "$f"
+map i $bat "$f" --pager="less -+F"
 map D delete "$f"
