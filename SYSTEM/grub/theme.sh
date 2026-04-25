@@ -4,7 +4,7 @@ set -e
 theme_url="https://github.com/AdisonCavani/distro-grub-themes/raw/master/themes/ubuntu.tar"
 font_path="/usr/share/fonts/truetype/noto/NotoSansMono-Regular.ttf"
 
-cd /boot/efi/EFI/grub
+cd /boot/grub
 sudo mkdir -p theme fonts
 
 curl -fsSL "$theme_url" | sudo tar --no-same-owner -xvf - -C ./theme
