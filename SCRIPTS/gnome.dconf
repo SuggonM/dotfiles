@@ -114,3 +114,5 @@ sort-directories-first=true
 
 [org/gtk/settings/file-chooser]
 clock-format='12h'
+
+# vim: set ft=gitconfig:

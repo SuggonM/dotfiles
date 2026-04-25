@@ -56,3 +56,5 @@ function print_minutes {
 	ble/util/print "$str"
 }
 blehook POSTEXEC+=print_minutes
+
+# vim: set ft=bash:
