@@ -1,6 +1,4 @@
 # <device>    <dir>       <type> <options>                                         <dump> <fsck>
 LABEL=Ubuntu  /           ext4   defaults                                          0      1
 LABEL=ESP     /efi        vfat   defaults,fmask=133                                0      2
-LABEL=Arch    /mnt/arch   btrfs  defaults,nofail,subvol=@,x-gvfs-show              0      2
-LABEL=Arch    /mnt/arch/home btrfs defaults,nofail,subvol=@home                    0      2
-/swap.img     none        swap   defaults                                          0      0
+/swap.img     none        swap   sw                                                0      0
