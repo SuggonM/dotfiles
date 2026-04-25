@@ -73,7 +73,7 @@ pkgs=(
 	speedtest-cli
 	stow
 	systemd-zram-generator
-	tldr-py
+	tealdeer
 	tmux
 	traceroute
 	translate-shell
