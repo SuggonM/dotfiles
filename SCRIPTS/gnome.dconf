@@ -16,7 +16,7 @@ play-sound=true
 automatic-timezone=true
 
 [org/gnome/desktop/input-sources]
-mru-sources=[('ibus', 'mozc-jp'), ('xkb', 'us')]
+mru-sources=[('xkb', 'us'), ('ibus', 'mozc-jp')]
 sources=[('xkb', 'us'), ('ibus', 'mozc-jp')]
 
 [org/gnome/desktop/interface]
@@ -26,12 +26,12 @@ clock-show-seconds=true
 clock-show-weekday=true
 color-scheme='prefer-dark'
 cursor-size=24
+cursor-theme='breeze_cursors'
 enable-animations=true
 gtk-theme='Yaru-purple-dark'
 icon-theme='Yaru-purple-dark'
 locate-pointer=true
 show-battery-percentage=true
-toolkit-accessibility=false
 
 [org/gnome/desktop/peripherals/mouse]
 speed=0.0
