@@ -19,45 +19,6 @@ icon-opacity=240
 icon-saturation=0.0
 icon-size=0
 
-[arcmenu]
-arcmenu-hotkey=@as []
-disable-scrollview-fade-effect=false
-hide-overview-on-arcmenu-open=true
-hide-overview-on-startup=true
-highlight-search-result-terms=true
-menu-background-color='rgba(48,48,49,0.98)'
-menu-border-color='rgb(60,60,60)'
-menu-button-appearance='Icon'
-menu-font-size=11
-menu-foreground-color='rgb(223,223,223)'
-menu-height=500
-menu-item-active-bg-color='rgba(119,100,216,0.36)'
-menu-item-active-fg-color='rgb(255,255,255)'
-menu-item-grid-icon-size='Default'
-menu-item-hover-bg-color='rgb(119,100,216)'
-menu-item-hover-fg-color='rgb(255,255,255)'
-menu-layout='Eleven'
-menu-separator-color='rgba(255,255,255,0.1)'
-menu-themes=[['ArcMenu Style', 'rgba(48,48,49,0.98)', 'rgb(223,223,223)', 'rgb(60,60,60)', '1', '14', '11', 'rgba(255,255,255,0.1)', 'rgb(21,83,158)', 'rgb(255,255,255)', 'rgb(25,98,163)', 'rgb(255,255,255)'], ['Simply Dark', 'rgba(28,28,28,0.98)', 'rgb(211,218,227)', 'rgb(63,62,64)', '1', '14', '11', 'rgb(63,62,64)', 'rgba(238,238,236,0.08)', 'rgb(255,255,255)', 'rgba(228,228,226,0.15)', 'rgb(255,255,255)'], ['Dark Blue', 'rgb(30,37,41)', 'rgb(189,230,251)', 'rgb(41,50,55)', '1', '14', '11', 'rgba(99,99,98,0.56)', 'rgba(189,230,251,0.08)', 'rgb(189,230,251)', 'rgba(189,230,251,0.15)', 'rgb(189,230,251)'], ['Light Blue', 'rgb(245,247,250)', 'rgb(18,51,84)', 'rgba(18,51,84,0.2)', '1', '14', '11', 'rgba(18,51,84,0.15)', 'rgba(18,51,84,0.08)', 'rgb(18,51,84)', 'rgba(18,51,84,0.15)', 'rgb(18,51,84)'], ['Purple', 'rgba(48,48,49,0.98)', 'rgb(223,223,223)', 'rgb(60,60,60)', '1', '14', '11', 'rgba(255,255,255,0.1)', 'rgb(119,100,216)', 'rgb(255,255,255)', 'rgba(119,100,216,0.36)', 'rgb(255,255,255)']]
-menu-width-adjustment=-200
-multi-monitor=false
-override-menu-theme=true
-pop-folders-data={'Library Home': 'Library Home', 'Utilities': 'Utilities', '43992b3e-bd21-4d23-a432-adb17f2fc5f2': 'Office'}
-position-in-panel='Left'
-power-options=[(0, true), (1, true), (2, true), (3, true), (4, false), (5, false), (6, false), (7, false)]
-prefs-visible-page=0
-recently-installed-apps=@as []
-runner-hotkey=['<Super>p']
-runner-hotkey-open-primary-monitor=false
-runner-position='Centered'
-runner-search-display-style='Grid'
-runner-show-frequent-apps=true
-search-entry-border-radius=(true, 25)
-search-hidden=false
-search-provider-recent-files=true
-show-activities-button=false
-update-notifier-project-version=70
-
 [bluetooth-battery-monitor]
 always-show-percentage=true
 hide-original-bluetooth-icon=true
@@ -209,7 +170,7 @@ skin-tone=0
 [extension-list]
 extension-appid='com.mattjakeman.ExtensionManager.desktop'
 homepage-button=false
-ignore-list=['color-picker@tuberry', 'compiz-windows-effect@hermes83.github.com', 'custom-command-list@storageb.github.com', 'custom-command-toggle@storageb.github.com', 'extension-list@tu.berry', 'lockkeys@vaina.lt', 'touchpad-gesture-customization@coooolapps.com', 'simple-timer@majortomvr.github.com', 'emoji-copy@felipeftn', 'lockscreen-extension@pratap.fastmail.fm', 'arcmenu@arcmenu.com', 'allowlockedremotedesktop@kamens.us', 'just-perfection-desktop@just-perfection', 'System_Monitor@bghome.gmail.com', 'appindicatorsupport@rgcjonas.gmail.com', 'dash-to-dock@micxgx.gmail.com', 'start-overlay-in-application-view@Hex_cz', 'bluetooth-battery-monitor@v8v88v8v88.com', 'dynamic-music-pill@andbal', 'copyous@boerdereinar.dev']
+ignore-list=['color-picker@tuberry', 'compiz-windows-effect@hermes83.github.com', 'custom-command-list@storageb.github.com', 'extension-list@tu.berry', 'lockkeys@vaina.lt', 'touchpad-gesture-customization@coooolapps.com', 'simple-timer@majortomvr.github.com', 'emoji-copy@felipeftn', 'lockscreen-extension@pratap.fastmail.fm', 'allowlockedremotedesktop@kamens.us', 'just-perfection-desktop@just-perfection', 'System_Monitor@bghome.gmail.com', 'appindicatorsupport@rgcjonas.gmail.com', 'dash-to-dock@micxgx.gmail.com', 'start-overlay-in-application-view@Hex_cz', 'bluetooth-battery-monitor@v8v88v8v88.com', 'dynamic-music-pill@andbal', 'copyous@boerdereinar.dev', 'fullscreen-notifications@sorrow.about.alice.pm.me']
 ignore-menu=false
 remove-button=false
 
