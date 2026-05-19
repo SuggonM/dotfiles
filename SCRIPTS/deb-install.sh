@@ -8,7 +8,7 @@ function tailscale {
 
 # https://vencord.dev/download/
 function vencord {
-	local inject="sed '/  sudo/s/$/ --repair --location \/usr\/share\/discord/'"
+	local inject="sed '/  sudo/s/$/ --repair --location \$HOME\/.config\/discord/'"
 	sh -c "$(curl -sS https://raw.githubusercontent.com/Vendicated/VencordInstaller/main/install.sh | eval "$inject")"
 }
 
