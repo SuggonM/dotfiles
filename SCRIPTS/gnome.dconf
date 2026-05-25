@@ -28,6 +28,7 @@ color-scheme='prefer-dark'
 cursor-size=24
 cursor-theme='breeze_cursors'
 enable-animations=true
+gtk-enable-primary-paste=true
 gtk-theme='Yaru-purple-dark'
 icon-theme='Yaru-purple-dark'
 locate-pointer=true
