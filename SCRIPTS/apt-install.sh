@@ -14,10 +14,9 @@ pkgs=(
 	arch-install-scripts  # arch-chroot is too convenient
 	bat
 	bindfs  # bind-mount with altered ownership
-	breeze  # kde app themes
+	breeze  # kde plasma themes
 	build-essential  # compile software from source
 	catimg
-	clifm
 	cmake
 	curl
 	dconf-editor
@@ -26,6 +25,7 @@ pkgs=(
 	fastfetch
 	fd-find  # `find` alternative, nvim-telescope dependency
 	ffmpeg
+	file-roller
 	flatpak
 	font-manager
 	fprintd  # linux fingerprint interface
@@ -46,6 +46,10 @@ pkgs=(
 	keyd  # key remap
 	lazygit
 	lf
+	libreoffice-calc
+	libreoffice-gtk3
+	libreoffice-impress
+	libreoffice-writer
 	lolcat
 	lua5.4
 	lynx
@@ -75,6 +79,7 @@ pkgs=(
 	tmux
 	traceroute
 	translate-shell
+	transmission-gtk  # torrent client
 	tree
 	tree-sitter-cli
 	vlc
