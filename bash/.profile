@@ -26,7 +26,17 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-# ensure PAM variables are sourced, even in non-systemd session (chroots)
-set -o allexport
-source "$HOME/.pam_environment"
-set +o allexport
+# environment variables
+
+# git, systemctl
+export LESS=FR
+export SYSTEMD_LESS=FR
+
+# <C-x> <C-e> (edit terminal command)
+export EDITOR=nvim
+
+# sudoedit
+export SUDO_EDITOR=nvim
+
+# man
+export MANPAGER="bat --plain -l man"
