@@ -33,6 +33,7 @@ vim.o.splitbelow = true
 vim.o.pumblend = 15
 vim.o.cmdheight = 0
 vim.o.cursorline = true
+vim.o.laststatus = 3
 vim.api.nvim_set_hl(0, 'CursorLine', { bg = '#1f1f1f' })
 vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = '#ffffff' })
 vim.keymap.set('i', 'kj', '<Escape>')
