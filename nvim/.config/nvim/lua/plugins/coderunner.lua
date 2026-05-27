@@ -10,7 +10,8 @@ return {
 		before_run_filetype = vim.cmd.write,
 		filetype = {
 			java = 'java',
-			python = 'python3 -u'
+			python = 'python3 -u',
+			typescript = 'deno --check'
 		}
 	},
 
