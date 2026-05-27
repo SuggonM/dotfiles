@@ -3,5 +3,4 @@
 path=$(echo "$NAUTILUS_SCRIPT_SELECTED_URIS" | \
 	sed -E -e '1!d' -e 's/%20/ /g' -e 's/(admin|file):\/\///')
 
-ptyxis --tab -- sudo su -c \
-	"[ -d '$path' ] && cd '$path' || cd '$(dirname "$path")'; exec bash"
+nautilus "admin://$path"
