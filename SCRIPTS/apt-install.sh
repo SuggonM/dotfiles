@@ -88,6 +88,7 @@ pkgs=(
 	x11-apps  # detect Xwayland with xeyes
 	xxd  # colorful hexdump
 	yq
+	zoxide
 )
 
 selected=(
