@@ -42,6 +42,7 @@ systray-dropper-icon=''
 
 [com/github/hermes83/compiz-windows-effect]
 friction=3.5
+last-version=31
 mass=70.0
 maximize-effect=true
 resize-effect=false
@@ -96,7 +97,7 @@ animation-time=0.20000000000000001
 apply-custom-theme=false
 apply-glossy-effect=true
 autohide=true
-autohide-in-fullscreen=false
+autohide-in-fullscreen=true
 background-color='rgb(0,0,0)'
 background-opacity=0.6
 click-action='focus-minimize-or-previews'
@@ -108,7 +109,7 @@ custom-theme-running-dots-color='rgb(222,221,218)'
 custom-theme-shrink=true
 dash-max-icon-size=48
 disable-overview-on-startup=true
-dock-fixed=true
+dock-fixed=false
 dock-position='LEFT'
 extend-height=true
 height-fraction=0.90000000000000002
@@ -145,7 +146,8 @@ show-dock-urgent-notify=true
 show-favorites=true
 show-icons-emblems=true
 show-mounts=false
-show-mounts-only-mounted=true
+show-mounts-network=false
+show-mounts-only-mounted=false
 show-running=true
 show-show-apps-button=true
 show-trash=false
@@ -155,6 +157,7 @@ unity-backlit-items=false
 workspace-agnostic-urgent-windows=true
 
 [dynamic-music-pill]
+has-seen-first-hint=true
 inline-artist=false
 popup-show-player-selector=true
 scroll-text=false
@@ -211,7 +214,8 @@ screen-sharing-indicator=true
 search=true
 show-apps-button=true
 startup-status=0
-support-notifier-showed-version=34
+support-notifier-showed-version=36
+support-notifier-type=0
 switcher-popup-delay=true
 top-panel-position=0
 type-to-search=true
@@ -261,12 +265,12 @@ storage-meter=false
 swap-meter=true
 
 [touchpad-gesture-customization]
-allow-minimize-window=false
+allow-minimize-window=true
 default-overview=true
 default-overview-gesture-direction=false
 enable-forward-back-gesture=false
 forward-back-application-keyboard-shortcuts={'org.mozilla.firefox.desktop': (5, false), 'org.chromium.Chromium.desktop': (5, false), 'microsoft-edge.desktop': (5, false), 'brave-browser.desktop': (5, false), 'org.gnome.gThumb.desktop': (2, false), 'org.gnome.Photos.desktop': (3, false), 'org.gnome.loupe.desktop': (3, false), 'shotwell.desktop': (3, false), 'code.desktop': (5, false), 'codium.desktop': (5, false), 'org.gnome.TextEditor.desktop': (5, false)}
 overview-navigation-states='CYCLIC'
-pinch-3-finger-gesture='SHOW_DESKTOP'
+pinch-3-finger-gesture='NONE'
 
 # vim: set ft=gitconfig:
