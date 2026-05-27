@@ -23,7 +23,7 @@ function vencord {
 function neovim {
 	local url="https://api.github.com/repos/neovim/neovim/releases/latest"
 	wget -q -c --show-progress -O /tmp/nvim.appimage $(curl -sS "$url" | grep -o 'https://.*nvim-linux-x86_64.appimage' | head -n1)
-	sudo install /tmp/nvim.appimage /usr/bin/nvim
+	sudo install /tmp/nvim.appimage /usr/local/bin/nvim
 }
 
 # https://yazi-rs.github.io/docs/installation#debian
