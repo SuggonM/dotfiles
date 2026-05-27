@@ -6,6 +6,13 @@ function tailscale {
 	curl -fsSL https://tailscale.com/install.sh | sh
 }
 
+# https://discord.com/download
+function discord {
+	local url="https://discord.com/api/download?platform=linux&format=deb"
+	wget -q -c --show-progress -O /tmp/discord.deb "$url"
+	sudo apt-get install /tmp/discord.deb
+}
+
 # https://vencord.dev/download/
 function vencord {
 	local inject="sed '/  sudo/s/$/ --repair --location \$HOME\/.config\/discord/'"
