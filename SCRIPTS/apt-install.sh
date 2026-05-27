@@ -46,6 +46,7 @@ pkgs=(
 	keyd  # key remap
 	lazygit
 	lf
+	libgtop2-dev  # System Monitor GNOME extension dependency
 	libreoffice-calc
 	libreoffice-gtk3
 	libreoffice-impress
