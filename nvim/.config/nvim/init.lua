@@ -29,12 +29,15 @@ vim.o.spell = true
 vim.o.spelllang = 'en_us'
 vim.o.scrolloff = 2
 vim.o.splitright = true
+vim.o.splitbelow = true
 vim.o.pumblend = 15
 vim.o.cmdheight = 0
 vim.o.cursorline = true
 vim.api.nvim_set_hl(0, 'CursorLine', { bg = '#1f1f1f' })
 vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = '#ffffff' })
 vim.keymap.set('i', 'kj', '<Escape>')
+vim.keymap.set('n', 'ZS', ':w<CR>')
+vim.keymap.set('n', '<M-s>', 'z=1<CR>', { desc = 'Pick first spell suggestion' })
 
 require('vim._core.ui2').enable({
 	enabled = true,
