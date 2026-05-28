@@ -11,6 +11,7 @@ flatpaks=(
 	fr.handbrake.ghb
 	io.github.ungoogled_software.ungoogled_chromium
 	org.gimp.GIMP
+	sh.ppy.osu
 )
 
 selected=(
