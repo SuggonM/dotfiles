@@ -42,7 +42,7 @@ pkgs=(
 	gparted
 	hexedit
 	jq
-	kate
+	kwrite
 	keyd  # key remap
 	lazygit
 	lf
