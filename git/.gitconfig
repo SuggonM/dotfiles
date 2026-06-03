@@ -6,6 +6,8 @@
 	defaultBranch = main
 [core]
 	pager = delta
+[grep]
+	linenumber = true
 [alias]
 	l = !lazygit
 	clean-ignored = clean -fdX
