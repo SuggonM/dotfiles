@@ -71,3 +71,10 @@ vim.api.nvim_create_autocmd('CmdlineChanged', {
 		vim.fn.wildtrigger()
 	end
 })
+
+-- enable hlyank
+vim.api.nvim_create_autocmd('TextYankPost', {
+	callback = function()
+		vim.highlight.on_yank()
+	end
+})
