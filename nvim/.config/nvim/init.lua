@@ -36,8 +36,13 @@ vim.o.cursorline = true
 vim.o.laststatus = 3
 vim.api.nvim_set_hl(0, 'CursorLine', { bg = '#1f1f1f' })
 vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = '#ffffff' })
+
+local nxo = { 'n', 'x', 'o' }
+
 vim.keymap.set('i', 'kj', '<Escape>')
 vim.keymap.set('n', 'ZS', ':w<CR>')
+vim.keymap.set(nxo, 'H', '^')
+vim.keymap.set(nxo, 'L', 'g_')
 vim.keymap.set('n', '<M-s>', 'z=1<CR>', { desc = 'Pick first spell suggestion' })
 
 require('vim._core.ui2').enable({
@@ -72,7 +77,7 @@ vim.api.nvim_create_autocmd('CmdlineChanged', {
 	end
 })
 
--- enable hlyank
+-- enable hl-yank
 vim.api.nvim_create_autocmd('TextYankPost', {
 	callback = function()
 		vim.highlight.on_yank()
