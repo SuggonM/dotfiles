@@ -32,7 +32,8 @@ fi
 export LESS=FR
 export SYSTEMD_LESS=FR
 
-# sudoedit
+# default and sudoedit
+export EDITOR=nvim
 export SUDO_EDITOR=nvim
 
 # man  # https://github.com/sharkdp/bat/issues/3053#issuecomment-2259573578

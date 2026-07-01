@@ -16,6 +16,7 @@ alias sudo="sudo " # https://askubuntu.com/a/22043/1873035
 alias archroot="sudo arch-chroot /mnt/arch su - suggon"
 alias cp="cp --preserve=timestamps"
 alias scp="scp -p"
+alias venv="source .venv/bin/activate"
 
 # when using adb pull, auto add -a (preserve timestamp) flag
 function adb {
