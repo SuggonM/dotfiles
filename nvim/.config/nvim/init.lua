@@ -40,7 +40,9 @@ vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = '#ffffff' })
 local nxo = { 'n', 'x', 'o' }
 
 vim.keymap.set('i', 'kj', '<Escape>')
-vim.keymap.set('n', 'ZS', ':w<CR>')
+vim.keymap.set('n', 'ZS', vim.cmd.write)
+vim.keymap.set('n', '<C-u>', '<C-u>zz')
+vim.keymap.set('n', '<C-d>', '<C-d>zz')
 vim.keymap.set(nxo, 'H', '^')
 vim.keymap.set(nxo, 'L', 'g_')
 vim.keymap.set('n', '<M-s>', 'z=1<CR>', { desc = 'Pick first spell suggestion' })
