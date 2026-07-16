@@ -29,6 +29,8 @@ pkgs=(
 	speedtest-go
 	stow
 	tealdeer
+	termux-api
+	termux-services
 	tmux
 	traceroute
 	translate-shell
