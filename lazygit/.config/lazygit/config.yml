@@ -1,6 +1,13 @@
 notARepository: skip
+promptToReturnFromSubprocess: false
 gui:
   nerdFontsVersion: 3
+  shrinkSidePanelsToContent: true
+  showRootItemInFileTree: false
+  sidePanels:
+  - [files, worktrees, submodules]
+  - [branches, remotes, tags]
+  - [commits, reflog, stash]
 git:
   overrideGpg: true
   pagers:
