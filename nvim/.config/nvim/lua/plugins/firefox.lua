@@ -6,7 +6,7 @@ return {
 	init = function()
 		vim.g.firenvim_config = {
 			globalSettings = {
-				ignoreKeys = { all = { '<SA-P>' } }
+				ignoreKeys = { all = { '<SA-P>', '<SA-V>' } }
 			},
 			localSettings = {
 				['.*'] = {
@@ -23,11 +23,11 @@ return {
 		if vim.g.started_by_firenvim == true then
 			vim.api.nvim_create_autocmd('BufReadPost', {
 				callback = function()
-					require('smear_cursor').toggle()
-					vim.keymap.set('n', '<Esc><Esc>', vim.fn['firenvim#focus_page'])
+					require('vim._core.ui2').enable({ enabled = true, msg = { targets = 'msg' } })
+					require('treesitter-context').disable()
 					vim.o.laststatus = 0
 					vim.o.autochdir = true
-					vim.o.guifont = 'Monaco:h15'
+					vim.o.guifont = 'Comic Code:h14'
 					-- hack to run ftplugins and get snippets from both languages
 					vim.o.filetype = 'mediawiki'
 					vim.o.filetype = 'html'
