@@ -17,6 +17,7 @@ alias archroot="sudo arch-chroot /mnt/arch su - suggon"
 alias cp="cp --preserve=timestamps"
 alias scp="scp -p"
 alias venv="source .venv/bin/activate"
+alias qr="qrencode -m2 -t ANSIUTF8"
 
 # when using adb pull, auto add -a (preserve timestamp) flag
 function adb {

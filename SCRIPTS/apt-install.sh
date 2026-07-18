@@ -65,6 +65,7 @@ pkgs=(
 	postgresql
 	python3-pip
 	qalc
+	qrencode
 	radare2  # disassembler
 	rar  # this is trial version btw :)
 	reptyr  # adopt a disowned/runaway process
