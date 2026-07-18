@@ -79,9 +79,9 @@ vim.api.nvim_create_autocmd('CmdlineChanged', {
 	end
 })
 
--- enable hl-yank
-vim.api.nvim_create_autocmd('TextYankPost', {
+-- enable hl-yank (and hl-put for 0.13)
+vim.api.nvim_create_autocmd({ 'TextYankPost', --[['TextPutPost']] }, {
 	callback = function()
-		vim.highlight.on_yank()
+		vim.highlight.on_yank() -- hl_op()
 	end
 })
