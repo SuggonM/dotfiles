@@ -173,7 +173,7 @@ skin-tone=0
 [extension-list]
 extension-appid='com.mattjakeman.ExtensionManager.desktop'
 homepage-button=false
-ignore-list=['color-picker@tuberry', 'compiz-windows-effect@hermes83.github.com', 'custom-command-list@storageb.github.com', 'extension-list@tu.berry', 'lockkeys@vaina.lt', 'touchpad-gesture-customization@coooolapps.com', 'simple-timer@majortomvr.github.com', 'emoji-copy@felipeftn', 'lockscreen-extension@pratap.fastmail.fm', 'allowlockedremotedesktop@kamens.us', 'just-perfection-desktop@just-perfection', 'System_Monitor@bghome.gmail.com', 'appindicatorsupport@rgcjonas.gmail.com', 'dash-to-dock@micxgx.gmail.com', 'start-overlay-in-application-view@Hex_cz', 'bluetooth-battery-monitor@v8v88v8v88.com', 'dynamic-music-pill@andbal', 'copyous@boerdereinar.dev', 'fullscreen-notifications@sorrow.about.alice.pm.me']
+ignore-list=['color-picker@tuberry', 'compiz-windows-effect@hermes83.github.com', 'custom-command-list@storageb.github.com', 'extension-list@tu.berry', 'touchpad-gesture-customization@coooolapps.com', 'simple-timer@majortomvr.github.com', 'emoji-copy@felipeftn', 'lockscreen-extension@pratap.fastmail.fm', 'allowlockedremotedesktop@kamens.us', 'just-perfection-desktop@just-perfection', 'System_Monitor@bghome.gmail.com', 'appindicatorsupport@rgcjonas.gmail.com', 'dash-to-dock@micxgx.gmail.com', 'start-overlay-in-application-view@Hex_cz', 'bluetooth-battery-monitor@v8v88v8v88.com', 'dynamic-music-pill@andbal', 'copyous@boerdereinar.dev']
 ignore-menu=false
 remove-button=false
 
@@ -236,12 +236,6 @@ world-clock=true
 digits=uint32 2
 timeout=uint32 5000
 
-[lockkeys]
-capslock-indicator='never'
-notification-preferences='osd'
-numlock-indicator='when-active'
-style='none'
-
 [lockscreen-extension]
 background-image-path-1='file:///usr/share/backgrounds/warty-final-ubuntu.png'
 gradient-direction-1='none'
@@ -272,5 +266,6 @@ enable-forward-back-gesture=false
 forward-back-application-keyboard-shortcuts={'org.mozilla.firefox.desktop': (5, false), 'org.chromium.Chromium.desktop': (5, false), 'microsoft-edge.desktop': (5, false), 'brave-browser.desktop': (5, false), 'org.gnome.gThumb.desktop': (2, false), 'org.gnome.Photos.desktop': (3, false), 'org.gnome.loupe.desktop': (3, false), 'shotwell.desktop': (3, false), 'code.desktop': (5, false), 'codium.desktop': (5, false), 'org.gnome.TextEditor.desktop': (5, false)}
 overview-navigation-states='CYCLIC'
 pinch-3-finger-gesture='NONE'
+pinch-4-finger-gesture='NONE'
 
 # vim: set ft=gitconfig:
