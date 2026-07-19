@@ -2,7 +2,7 @@
 # import command: dconf load / < gnome.dconf
 
 [org/gnome/desktop/break-reminders]
-selected-breaks=['eyesight', 'movement']
+selected-breaks=['eyesight']
 
 [org/gnome/desktop/break-reminders/eyesight]
 play-sound=true
@@ -61,6 +61,10 @@ sort-order=['org.gnome.Settings.desktop', 'org.gnome.Contacts.desktop', 'org.gno
 [org/gnome/desktop/sound]
 allow-volume-above-100-percent=true
 event-sounds=true
+
+[org/gnome/desktop/wm/keybindings]
+toggle-fullscreen=['<Super>f']
+toggle-maximized=['<Super>m']
 
 [org/gnome/desktop/wm/preferences]
 resize-with-right-button=true
