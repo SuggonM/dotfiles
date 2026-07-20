@@ -35,11 +35,12 @@ locate-pointer=true
 show-battery-percentage=true
 
 [org/gnome/desktop/peripherals/mouse]
-speed=0.0
+accel-profile='flat'
+speed=0.5
 
 [org/gnome/desktop/peripherals/touchpad]
 click-method='fingers'
-speed=0.52136752136752129
+speed=0.5
 two-finger-scrolling-enabled=true
 
 [org/gnome/desktop/privacy]
