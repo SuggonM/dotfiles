@@ -1,6 +1,6 @@
 set hidden
 set mouse
 set previewer ~/.config/lf/preview.sh
-map i $bat "$f" --pager="less -+F"
+map i $bat "$f" --pager="less -+F -R"
 map D delete "$f"
 map <c-z> $ kill -STOP $PPID
