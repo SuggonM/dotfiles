@@ -18,6 +18,8 @@ pkgs=(
 	build-essential  # compile software from source
 	catimg
 	cmake
+	cpulimit
+	cryptsetup
 	curl
 	dconf-editor
 	default-jdk  # java JDK
