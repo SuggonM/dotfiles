@@ -29,8 +29,8 @@ fi
 # environment variables
 
 # git, systemctl
-export LESS=FR
-export SYSTEMD_LESS=FR
+export LESS=FRi
+export SYSTEMD_LESS=FRi
 
 # default and sudoedit
 export EDITOR=nvim
