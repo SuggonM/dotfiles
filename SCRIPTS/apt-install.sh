@@ -92,8 +92,15 @@ pkgs=(
 	zoxide
 )
 
+filtered=()
+for pkg in "${pkgs[@]}"; do
+	if ! dpkg -s "$pkg" &> /dev/null; then
+		filtered+=("$pkg")
+	fi
+done
+
 selected=(
-	$(printf '%s\n' "${pkgs[@]}" | fzf --multi --cycle --bind ctrl-a:select-all)
+	$(printf '%s\n' "${filtered[@]}" | fzf --multi --cycle --bind ctrl-a:select-all)
 )
 
 echo "Selected:"
