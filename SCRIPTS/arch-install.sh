@@ -47,6 +47,9 @@ pacman -S --noconfirm networkmanager dosfstools man-db grub efibootmgr os-prober
 
 ln -sf /usr/share/zoneinfo/Asia/Kathmandu /etc/localtime
 hwclock --systohc
+echo "en_US.UTF-8 UTF-8" > /etc/locale.gen
+echo "ja_JP.UTF-8 UTF-8" >> /etc/locale.gen
+locale-gen
 echo "LANG=en_US.UTF-8" > /etc/locale.conf
 echo "FONT=ter-128b" > /etc/vconsole.conf
 echo "arch" > /etc/hostname
