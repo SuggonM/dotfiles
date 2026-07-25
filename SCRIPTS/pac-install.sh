@@ -2,8 +2,7 @@
 set -e
 
 if ! command -v fzf > /dev/null; then
-	sudo apt-get update
-	sudo apt-get install fzf
+	sudo pacman -Sy --noconfirm fzf
 fi
 
 pkgs=(
@@ -96,7 +95,7 @@ pkgs=(
 
 filtered=()
 for pkg in "${pkgs[@]}"; do
-	if ! dpkg -s "$pkg" &> /dev/null; then
+	if ! pacman -Q "$pkg" &> /dev/null; then
 		filtered+=("$pkg")
 	fi
 done
@@ -108,5 +107,4 @@ selected=(
 echo "Selected:"
 printf '%s\n' "${selected[@]}" | column
 
-sudo apt-get update
-sudo apt-get install "${selected[@]}"
+sudo pacman -Syu "${selected[@]}"
