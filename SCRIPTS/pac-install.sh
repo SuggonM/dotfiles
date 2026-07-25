@@ -29,6 +29,7 @@ pkgs=(
 	font-manager
 	fprintd  # linux fingerprint interface
 	fzf
+	gptfdisk
 	git
 	git-delta
 	github-cli
@@ -42,6 +43,7 @@ pkgs=(
 	keyd  # key remap
 	kwrite
 	lazygit
+	lesspipe
 	lf
 	libqalculate
 	libreoffice-fresh
@@ -52,10 +54,12 @@ pkgs=(
 	ncdu
 	net-tools
 	nmap
+	noto-fonts-cjk
 	npm
 	openssh
 	plocate
 	postgresql
+	ptyxis
 	python-pip
 	python-pipx
 	qrencode
