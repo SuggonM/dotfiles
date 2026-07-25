@@ -6,6 +6,7 @@ if ! command -v fzf > /dev/null; then
 fi
 
 pkgs=(
+	act
 	aha  # convert terminal output into html
 	android-tools
 	arch-install-scripts  # arch-chroot is too convenient
@@ -19,23 +20,27 @@ pkgs=(
 	cryptsetup
 	curl
 	dconf-editor
+	discord
 	docker
 	extension-manager
 	fastfetch
 	fd  # `find` alternative, nvim-telescope dependency
 	ffmpeg
 	file-roller
+	firefoxpwa
 	flatpak
 	font-manager
 	fprintd  # linux fingerprint interface
 	fzf
 	gptfdisk
+	gimp
 	git
 	git-delta
 	github-cli
 	gnome-boxes
 	gnome-tweaks  # change themes, mouse behavior
 	gparted
+	gpu-screen-recorder-ui
 	hexedit
 	ibus-anthy  # Japanese input
 	jdk-openjdk  # java JDK
@@ -52,10 +57,12 @@ pkgs=(
 	lynx
 	mediainfo
 	ncdu
+	neovim
 	net-tools
 	nmap
 	noto-fonts-cjk
 	npm
+	obsidian
 	openssh
 	plocate
 	postgresql
@@ -73,6 +80,7 @@ pkgs=(
 	speedtest-cli
 	stow
 	sushi  # quick file preview from Nautilus
+	tailscale
 	tldr
 	tmux
 	traceroute
@@ -83,8 +91,10 @@ pkgs=(
 	unrar
 	vim
 	vlc
+	waydroid
 	wl-clipboard
 	xorg-xeyes  # detect Xwayland with xeyes
+	yazi
 	yq
 	zoxide
 	zram-generator
@@ -92,7 +102,16 @@ pkgs=(
 	# AUR
 	ani-cli
 	bindfs  # bind-mount with altered ownership
+	bottles
+	helium-browser-bin
+	insomnia-bin
 	limitcpu
+	normcap
+	osu-lazer-bin
+	pinta
+	vencord-hook
+	vscodium-bin
+	zen-browser-bin
 )
 
 filtered=()
