@@ -12,3 +12,8 @@ git:
   overrideGpg: true
   pagers:
     - pager: delta --dark --paging=never
+customCommands:
+  - key: D
+    context: commits
+    description: Sync author/committer dates from here on
+    command: "git rebase --committer-date-is-author-date {{.SelectedLocalCommit.Hash}}~1"
