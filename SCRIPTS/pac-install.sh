@@ -6,69 +6,60 @@ if ! command -v fzf > /dev/null; then
 fi
 
 pkgs=(
-	adb
 	aha  # convert terminal output into html
-	anacron
-	ani-cli
+	android-tools
 	arch-install-scripts  # arch-chroot is too convenient
+	base-devel # compile software from source
 	bat
-	bindfs  # bind-mount with altered ownership
+	bazaar
 	breeze  # kde plasma themes
-	build-essential  # compile software from source
 	catimg
 	cmake
-	cpulimit
+	cronie
 	cryptsetup
 	curl
 	dconf-editor
-	default-jdk  # java JDK
-	docker.io
+	docker
+	extension-manager
 	fastfetch
-	fd-find  # `find` alternative, nvim-telescope dependency
+	fd  # `find` alternative, nvim-telescope dependency
 	ffmpeg
 	file-roller
 	flatpak
 	font-manager
 	fprintd  # linux fingerprint interface
 	fzf
-	gh
 	git
 	git-delta
+	github-cli
 	gnome-boxes
-	gnome-shell-extension-manager
-	gnome-software
-	gnome-software-plugin-flatpak
-	gnome-sushi  # quick file preview from Nautilus
 	gnome-tweaks  # change themes, mouse behavior
 	gparted
 	hexedit
+	ibus-anthy  # Japanese input
+	jdk-openjdk  # java JDK
 	jq
-	kwrite
 	keyd  # key remap
+	kwrite
 	lazygit
 	lf
-	libgtop2-dev  # System Monitor GNOME extension dependency
-	libreoffice-calc
-	libreoffice-gtk3
-	libreoffice-impress
-	libreoffice-writer
+	libqalculate
+	libreoffice-fresh
 	lolcat
-	lua5.4
+	lua
 	lynx
 	mediainfo
 	ncdu
 	net-tools
 	nmap
 	npm
-	openssh-server
-	pipx
+	openssh
 	plocate
 	postgresql
-	python3-pip
-	qalc
+	python-pip
+	python-pipx
 	qrencode
 	radare2  # disassembler
-	rar  # this is trial version btw :)
 	reptyr  # adopt a disowned/runaway process
 	ripgrep  # nvim-telescope dependency
 	ruby
@@ -77,20 +68,27 @@ pkgs=(
 	sl
 	speedtest-cli
 	stow
-	systemd-zram-generator
-	tealdeer
+	sushi  # quick file preview from Nautilus
+	tldr
 	tmux
 	traceroute
 	translate-shell
 	transmission-gtk  # torrent client
 	tree
 	tree-sitter-cli
+	unrar
+	vim
 	vlc
 	wl-clipboard
-	x11-apps  # detect Xwayland with xeyes
-	xxd  # colorful hexdump
+	xorg-xeyes  # detect Xwayland with xeyes
 	yq
 	zoxide
+	zram-generator
+
+	# AUR
+	ani-cli
+	bindfs  # bind-mount with altered ownership
+	limitcpu
 )
 
 filtered=()
@@ -107,4 +105,4 @@ selected=(
 echo "Selected:"
 printf '%s\n' "${selected[@]}" | column
 
-sudo pacman -Syu "${selected[@]}"
+paru -Syu "${selected[@]}"
