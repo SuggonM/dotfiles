@@ -44,7 +44,7 @@ prompt() {
 }
 PROMPT_COMMAND="prompt"
 
-eval "$(zoxide init bash)"
+command -v zoxide > /dev/null && eval "$(zoxide init bash)"
 [[ ! ${BLE_VERSION-} ]] || ble-attach
 
 ############ auto added ############
