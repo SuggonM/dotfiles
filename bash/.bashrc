@@ -56,3 +56,6 @@ export NVM_DIR="$HOME/.nvm"
 # Install Ruby Gems to ~/gems
 export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"
+
+# undo: revert what the last command did (undo.edaywalid.com)
+command -v undo > /dev/null && source $HOME/.local/share/undo/undo.bash
