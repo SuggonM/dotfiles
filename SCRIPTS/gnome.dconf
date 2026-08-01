@@ -74,6 +74,7 @@ resize-with-right-button=true
 migrated=true
 
 [org/gnome/mutter]
+attach-modal-dialogs=false
 edge-tiling=true
 overlay-key='Super'
 
