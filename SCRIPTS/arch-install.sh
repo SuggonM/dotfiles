@@ -57,6 +57,7 @@ echo "arch" > /etc/hostname
 systemctl enable NetworkManager
 passwd --stdin <<< 2456
 
+grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=grub
 echo GRUB_DISABLE_OS_PROBER=false >> /etc/default/grub
 grub-mkconfig -o /boot/grub/grub.cfg
 
