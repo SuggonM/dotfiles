@@ -84,5 +84,8 @@ pacman -S --noconfirm baobab gdm gnome-calculator gnome-characters gnome-clocks 
 
 systemctl enable gdm bluetooth
 
+touch /etc/tmpfiles.d/{portables,systemd-nspawn}.conf
+rm /usr/share/applications/{avahi-discover,bssh,bvnc,qv4l2,qvidcap,lstopo,org.gnome.Evince}.desktop
+
 su - suggon -c "git clone https://github.com/SuggonM/dotfiles --branch arch"
 EOF
