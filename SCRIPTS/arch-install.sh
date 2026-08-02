@@ -72,9 +72,6 @@ systemctl enable ufw
 ufw enable
 ufw allow from 192.168.1.0/24
 ufw limit ssh
-# waydroid
-ufw allow 53
-ufw allow 67
 ufw default allow FORWARD
 
 su - suggon -c "git clone https://aur.archlinux.org/paru-alpm-bin && cd paru-alpm-bin && makepkg -s"
