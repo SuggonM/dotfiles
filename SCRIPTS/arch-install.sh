@@ -77,9 +77,9 @@ ufw allow 53
 ufw allow 67
 ufw default allow FORWARD
 
-su - suggon -c "git clone https://aur.archlinux.org/paru-bin && cd paru-bin && makepkg -s"
-pacman -U --noconfirm ~suggon/paru-bin/paru-bin-[0-9]*.pkg.tar.zst
-rm -r ~suggon/paru-bin/
+su - suggon -c "git clone https://aur.archlinux.org/paru-alpm-bin && cd paru-alpm-bin && makepkg -s"
+pacman -U --noconfirm ~suggon/paru-alpm-bin/paru-alpm-bin-[0-9]*.pkg.tar.zst
+rm -r ~suggon/paru-alpm-bin/
 
 pacman -S --noconfirm pipewire wireplumber pipewire-pulse pipewire-jack
 pacman -S --noconfirm noto-fonts ttf-ubuntu-font-family ttf-input-nerd terminus-font
