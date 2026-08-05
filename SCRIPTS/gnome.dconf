@@ -1,6 +1,10 @@
 # update command: dconf dump / > gnome.dconf
 # import command: dconf load / < gnome.dconf
 
+[org/freedesktop/ibus/engine/anthy/common]
+input-mode=0
+show-dict-mode=false
+
 [org/gnome/desktop/break-reminders]
 selected-breaks=['eyesight']
 
@@ -16,8 +20,8 @@ play-sound=true
 automatic-timezone=true
 
 [org/gnome/desktop/input-sources]
-mru-sources=[('xkb', 'us'), ('ibus', 'mozc-jp')]
-sources=[('xkb', 'us'), ('ibus', 'mozc-jp')]
+mru-sources=[('xkb', 'us'), ('ibus', 'anthy')]
+sources=[('xkb', 'us'), ('ibus', 'anthy')]
 
 [org/gnome/desktop/interface]
 accent-color='purple'
@@ -29,8 +33,8 @@ cursor-size=24
 cursor-theme='breeze_cursors'
 enable-animations=true
 gtk-enable-primary-paste=true
-gtk-theme='Yaru-purple-dark'
-icon-theme='Yaru-purple-dark'
+gtk-theme='Adwaita'
+icon-theme='Adwaita'
 locate-pointer=true
 show-battery-percentage=true
 
@@ -68,6 +72,7 @@ toggle-fullscreen=['<Super>f']
 toggle-maximized=['<Super>m']
 
 [org/gnome/desktop/wm/preferences]
+button-layout='appmenu:minimize,maximize,close'
 resize-with-right-button=true
 
 [org/gnome/evolution-data-server]
