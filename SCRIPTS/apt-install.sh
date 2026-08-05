@@ -63,6 +63,7 @@ pkgs=(
 	npm
 	openssh-server
 	pipx
+	playerctl
 	plocate
 	postgresql
 	python3-pip
