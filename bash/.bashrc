@@ -6,7 +6,7 @@ function testserver {
 }
 
 function playerctl {
-	local host="${1:-ubuntu}"
+	local host="${1:-arch}"
 	termux-notification --type media \
 		--media-next "ssh $host playerctl next" \
 		--media-pause "ssh $host playerctl play-pause" \
