@@ -5,6 +5,15 @@ function testserver {
 	done
 }
 
+function playerctl {
+	local host="${1:-ubuntu}"
+	termux-notification --type media \
+		--media-next "ssh $host playerctl next" \
+		--media-pause "ssh $host playerctl play-pause" \
+		--media-play "ssh $host playerctl stop" \
+		--media-previous "ssh $host playerctl previous"
+}
+
 if [[ -n $SSH_CONNECTION ]]; then
 	fastfetch --logo none
 fi
