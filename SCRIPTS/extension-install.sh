@@ -24,11 +24,7 @@ exts=(
 	"touchpad-gesture-customization@coooolapps.com"
 )
 
-pipx install gnome-extensions-cli --system-site-packages
-
-if ! command -v gext > /dev/null; then
-	source $HOME/.profile
-fi
+paru -S --needed --noconfirm gnome-extensions-cli zenity
 
 gext --dbus install "${exts[@]}"
 
