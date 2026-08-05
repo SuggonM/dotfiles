@@ -43,6 +43,7 @@ pkgs=(
 	gnome-tweaks  # change themes, mouse behavior
 	gparted
 	hexedit
+	inotify-tools
 	jq
 	kwrite
 	keyd  # key remap
