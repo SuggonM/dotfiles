@@ -2,7 +2,7 @@
 [[ $- != *i* ]] && return
 
 # https://github.com/akinomyoga/ble.sh#13-set-up-bashrc
-BLESH="$HOME/.local/share/blesh/ble.sh"
+BLESH="/usr/share/blesh/ble.sh"
 [[ -f $BLESH ]] && source -- "$BLESH" --attach=none
 
 [[ -f "$HOME/.bashrc_default" ]] && source "$HOME/.bashrc_default"

@@ -104,6 +104,7 @@ pkgs=(
 	# AUR
 	ani-cli
 	bindfs  # bind-mount with altered ownership
+	blesh-git
 	bottles
 	helium-browser-bin
 	insomnia-bin
