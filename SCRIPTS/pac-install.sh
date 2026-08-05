@@ -43,6 +43,7 @@ pkgs=(
 	gpu-screen-recorder-ui
 	hexedit
 	ibus-anthy  # Japanese input
+	inotify-tools
 	jdk-openjdk  # java JDK
 	jq
 	keyd  # key remap
