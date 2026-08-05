@@ -110,6 +110,7 @@ pkgs=(
 	normcap
 	osu-lazer-bin
 	pinta
+	snapcast
 	vencord-hook
 	vscodium-bin
 	zen-browser-bin
