@@ -15,6 +15,7 @@ alias wupdatedb="updatedb --database-root /media/suggon/c -o /var/lib/plocate/pl
 alias sudo="sudo " # https://askubuntu.com/a/22043/1873035
 alias archroot="sudo arch-chroot /mnt/arch su - suggon"
 alias cp="cp --preserve=timestamps"
+alias mv="mv -i"
 alias scp="scp -p"
 alias venv="source .venv/bin/activate"
 alias qr="qrencode -m2 -t ANSIUTF8"
