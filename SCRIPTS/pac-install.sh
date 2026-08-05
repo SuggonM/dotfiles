@@ -9,21 +9,15 @@ pkgs=(
 	act
 	aha  # convert terminal output into html
 	android-tools
-	arch-install-scripts  # arch-chroot is too convenient
-	base-devel # compile software from source
 	bat
 	bazaar
 	breeze  # kde plasma themes
 	catimg
 	cmake
-	cronie
-	cryptsetup
-	curl
 	dconf-editor
 	discord
 	docker
 	extension-manager
-	fastfetch
 	fd  # `find` alternative, nvim-telescope dependency
 	ffmpeg
 	file-roller
@@ -32,20 +26,16 @@ pkgs=(
 	font-manager
 	fprintd  # linux fingerprint interface
 	fzf
-	gptfdisk
 	gimp
-	git
 	git-delta
 	github-cli
 	gnome-boxes
 	gnome-tweaks  # change themes, mouse behavior
 	gparted
 	gpu-screen-recorder-ui
-	hexedit
 	ibus-anthy  # Japanese input
 	inotify-tools
 	jdk-openjdk  # java JDK
-	jq
 	keyd  # key remap
 	kwrite
 	lazygit
@@ -56,16 +46,10 @@ pkgs=(
 	lolcat
 	lua
 	lynx
-	mediainfo
-	ncdu
-	neovim
-	net-tools
-	nmap
 	noto-fonts-cjk
 	npm
 	obsidian
 	playerctl
-	openssh
 	plocate
 	postgresql
 	ptyxis
@@ -80,21 +64,16 @@ pkgs=(
 	scrcpy
 	sl
 	speedtest-cli
-	stow
 	sushi  # quick file preview from Nautilus
 	tailscale
 	tldr
-	tmux
 	traceroute
 	translate-shell
 	transmission-gtk  # torrent client
-	tree
 	tree-sitter-cli
 	unrar
-	vim
 	vlc
 	waydroid
-	wl-clipboard
 	xorg-xeyes  # detect Xwayland with xeyes
 	yazi
 	yq

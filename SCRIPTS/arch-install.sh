@@ -43,7 +43,7 @@ pacstrap -K /mnt/archroot base linux linux-firmware-{amdgpu,mediatek} amd-ucode 
 genfstab -L /mnt/archroot >> /mnt/archroot/etc/fstab
 
 arch-chroot /mnt/archroot bash -ex << EOF
-pacman -S --noconfirm networkmanager dosfstools man-db grub efibootmgr os-prober fuse3 neovim ufw base-devel git
+pacman -S --noconfirm networkmanager dosfstools man-db grub efibootmgr os-prober fuse3 neovim ufw base-devel git stow
 
 ln -sf /usr/share/zoneinfo/Asia/Kathmandu /etc/localtime
 hwclock --systohc
