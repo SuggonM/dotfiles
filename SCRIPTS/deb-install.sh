@@ -26,6 +26,13 @@ function neovim {
 	sudo install /tmp/nvim.appimage /usr/local/bin/nvim
 }
 
+# https://neovim.io/doc/install/#appimage-universal-linux-package
+function snapcast {
+	local url="https://api.github.com/repos/snapcast/snapcast/releases/latest"
+	wget -q -c --show-progress -O /tmp/snapserver.deb $(curl -sS "$url" | grep -o 'https://.*snapserver.*amd64_trixie_with-pipewire.deb' | head -n1)
+	sudo apt-get install /tmp/snapserver.deb
+}
+
 # https://yazi-rs.github.io/docs/installation#debian
 function yazi {
 	local url="https://api.github.com/repos/sxyazi/yazi/releases/latest"
