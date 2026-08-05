@@ -63,6 +63,7 @@ pkgs=(
 	noto-fonts-cjk
 	npm
 	obsidian
+	playerctl
 	openssh
 	plocate
 	postgresql
