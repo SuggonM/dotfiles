@@ -37,4 +37,4 @@ pkgs=(
 	zip
 )
 
-sudo pacman -Syu --noconfirm "${pkgs[@]}"
+sudo pacman -Syu --needed --noconfirm "${pkgs[@]}"

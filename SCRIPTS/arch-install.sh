@@ -80,7 +80,7 @@ pacman -U --noconfirm ~suggon/paru-alpm-bin/paru-alpm-bin-[0-9]*.pkg.tar.zst
 rm -r ~suggon/paru-alpm-bin/
 
 pacman -S --noconfirm pipewire wireplumber pipewire-pulse pipewire-jack
-pacman -S --noconfirm noto-fonts ttf-ubuntu-font-family ttf-input-nerd terminus-font
+pacman -S --noconfirm noto-fonts ttf-ubuntu-font-family ttf-nerd-fonts-symbols-mono terminus-font
 pacman -S --noconfirm baobab gdm gnome-calculator gnome-characters gnome-clocks ptyxis gnome-control-center gnome-disk-utility gnome-font-viewer gnome-keyring gnome-logs gnome-remote-desktop gnome-session gnome-settings-daemon gnome-shell resources gst-thumbnailers gvfs gvfs-mtp gvfs-smb gvfs-wsdd loupe nautilus papers sushi xdg-desktop-portal-gnome xdg-user-dirs-gtk gnome-power-manager
 
 systemctl enable gdm bluetooth
