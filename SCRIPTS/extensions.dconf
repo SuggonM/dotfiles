@@ -85,7 +85,7 @@ command3=('*mount waydroid', '~/dotfiles/SCRIPTS/waydroid-mount.sh', '', true)
 command4=('*restart waydroid container', 'systemctl restart wayrdoid-container', '', true)
 command5=('*waydroid fullscreen', 'waydroid prop set persist.waydroid.width 1536 && waydroid prop set persist.waydroid.height 864 && waydroid session stop && waydroid show-full-ui', '', true)
 command6=('*waydroid maximize', 'waydroid prop set persist.waydroid.width "" && waydroid prop set persist.waydroid.height "" && waydroid session stop && waydroid show-full-ui', '', true)
-command7=('*start xtmapper', 'ptyxis -- cage_xtmapper.sh', '', true)
+command7=('*start xtmapper', 'ptyxis -- tmux new cage_xtmapper.sh', '', true)
 command8=('*open IME', 'ptyxis -- env ADB_DEV=192.168.240.112 ~/dotfiles/SCRIPTS/adb-IME.sh', '', true)
 menuicon-setting='utilities-terminal-symbolic'
 menuoptions-setting=2
