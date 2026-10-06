@@ -9,6 +9,7 @@ pkgs=(
 	act
 	aha  # convert terminal output into html
 	android-tools
+	aria2
 	bat
 	bazaar
 	breeze  # kde plasma themes

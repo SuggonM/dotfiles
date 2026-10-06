@@ -19,6 +19,7 @@ alias mv="mv -i"
 alias scp="scp -p"
 alias venv="source .venv/bin/activate"
 alias qr="qrencode -m2 -t ANSIUTF8"
+alias aria2+="aria2c -x16 -s16 -k1M"
 
 # when using adb pull, auto add -a (preserve timestamp) flag
 function adb {
