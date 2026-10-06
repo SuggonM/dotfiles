@@ -49,10 +49,11 @@ function start {
 }
 
 function wsh {
+	local waydroid=192.168.240.112
 	if [ $# -eq 0 ]; then
-		sudo waydroid shell bash
+		adb -s $waydroid shell -t su -s bash
 	else
-		echo "$@" | sudo waydroid shell
+		echo "$@" | adb -s $waydroid shell su
 	fi
 }
 
