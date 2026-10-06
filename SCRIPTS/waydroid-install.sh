@@ -11,11 +11,12 @@ fi
 sudo pacman -S --needed waydroid
 paru -S --needed --noconfirm waydroid-script-git bindfs
 
-sudo waydroid init
+sudo waydroid init -f \
+	-c https://waydroid-atv.github.io/ota/a17/system \
+	-v https://waydroid-atv.github.io/ota/a17/vendor
 
 # mkdir first to avoid waydroid_script creating missing dirs as root
 mkdir -p $HOME/.local/share/waydroid/data/
-sudo waydroid-extras install libhoudini
 sudo waydroid-extras install magisk
 
 waydroid show-full-ui &
