@@ -9,17 +9,18 @@ fi
 # if sourceforge is slow, connect to a VPN
 # https://github.com/waydroid/waydroid/issues/623#issuecomment-3864873879
 sudo pacman -S --needed waydroid
-paru -S --needed --noconfirm waydroid-image waydroid-script-git bindfs
-
-# https://github.com/casualsnek/waydroid_script/issues/251#issuecomment-3757952646
-# sudo sed -i 's/if result.stderr:/if result.returncode != 0 and result.stderr:/' \
-# 	/opt/waydroid-script/tools/helper.py
+paru -S --needed --noconfirm waydroid-script-git bindfs
 
 sudo waydroid init
+
+# mkdir first to avoid waydroid_script creating missing dirs as root
+mkdir -p $HOME/.local/share/waydroid/data/
 sudo waydroid-extras install libhoudini
 sudo waydroid-extras install magisk
 
-waydroid session start & sleep 5
+waydroid show-full-ui &
+sleep 10
+
 sudo waydroid shell pm disable com.android.inputmethod.latin
 sudo waydroid shell -- cmd media_session volume --set 15
 waydroid prop set persist.waydroid.multi_windows true
