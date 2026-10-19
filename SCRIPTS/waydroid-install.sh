@@ -12,8 +12,8 @@ sudo pacman -S --needed waydroid
 paru -S --needed --noconfirm waydroid-script-git bindfs
 
 sudo waydroid init -f \
-	-c https://waydroid-atv.github.io/ota/a17/system \
-	-v https://waydroid-atv.github.io/ota/a17/vendor
+	-c https://waydroid-atv.github.io/ota/a17-qpr0/system \
+	-v https://waydroid-atv.github.io/ota/a17-qpr0/vendor
 
 # mkdir first to avoid waydroid_script creating missing dirs as root
 mkdir -p $HOME/.local/share/waydroid/data/
