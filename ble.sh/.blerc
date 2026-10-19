@@ -1,7 +1,7 @@
 # config for ble.sh (bash extension with nice features)
 # https://github.com/akinomyoga/ble.sh
 
-ble-import -d integration/fzf-key-bindings
+ble-import integration/fzf-key-bindings
 
 function vim-load-hooks-custom {
 	ble-import vim-surround
