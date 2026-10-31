@@ -17,12 +17,12 @@ echo ":: Bypassing LineageOS setup wizard."
 	pm disable org.lineageos.setupwizard
 	settings put secure user_setup_complete 1
 	settings put global device_provisioned 1
+echo ":: Enabling persistent USB debugging state."
+	setprop persist.sys.usb.config adb
 echo ":: For better Action key functionality, remap Ctrl -> Action and Alt -> Ctrl in"
 echo ":: Settings > System > Keyboard > Physical keyboard > Modifier keys"
 
 # old fixes for a16-qpr; no longer needed
-# echo ":: Enabling persistent USB debugging state."
-# 	setprop persist.sys.usb.config adb
 # echo ":: Changing screenlock from Swipe to None."
 # 	cmd lock_settings set-disabled true
 # echo ":: Unable to hide battery icon; switching to minimal one instead."
